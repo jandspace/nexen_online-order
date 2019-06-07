@@ -1,0 +1,42 @@
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+.sprite-icon {
+  background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/sprites/sprite-17325454.svg')/*rtl:ignore*/;
+}
+
+.no-svg .sprite-icon {
+  background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/sprites/sprite-17325454.png')/*rtl:ignore*/;
+
+}
+
+
+.icon--kaplan-accommodation {
+  width: 102px;
+  height: 102px;
+  background-position: 0 0/*rtl:ignore*/;
+}
+
+.icon--kaplan-course {
+  width: 102px;
+  height: 102px;
+  background-position: 50% 0/*rtl:ignore*/;
+}
+
+.icon--kaplan-destination {
+  width: 102px;
+  height: 102px;
+  background-position: 0 100%/*rtl:ignore*/;
+}
+
+.icon--kaplan-personalisation {
+  width: 102px;
+  height: 102px;
+  background-position: 50% 100%/*rtl:ignore*/;
+}
+
+.icon--kaplan-school {
+  width: 102px;
+  height: 102px;
+  background-position: 100% 0/*rtl:ignore*/;
+}

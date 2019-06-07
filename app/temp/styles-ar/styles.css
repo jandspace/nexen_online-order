@@ -1,0 +1,2143 @@
+/* ARABIC STYLE AUTOMATION */
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+/* BASE */
+/* EX
+@mixin sm-min {
+	padding: 0;
+}
+*/
+/* XS - Extra Small Devices - - - - - - - - - - - - - - - */
+/* SM - Small Devices - - - - - - - - - - - - - - - */
+/* MD - Medium Devices - - - - - - - - - - - - - - - */
+/* LG - Large Devices - - - - - - - - - - - - - - - */
+/* XL - Extra Large Devices - - - - - - - - - - - - - - - */
+/* Retina - - - - - - - - - - - - - - - */
+.wrapper {
+	max-width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.wrapper:before {
+	content: '';
+	display: table;
+}
+.wrapper:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+@media (min-width: 992px) {
+.wrapper {
+		padding-right: 15px;
+		padding-left: 15px
+}
+		}
+html, body {
+	direction: rtl;
+	color: #35771F;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	color: #606060;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	color: #007DB3;
+}
+a:hover {
+	color: #007DB3;
+}
+.content {
+	margin-top: 0;
+}
+.node-hub .field-collection-container .field-collection-view {
+	padding: 0;
+}
+.breadcrumb-container,
+.title-container {
+	display: none;
+}
+#wrapper {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#content .region-content {
+	width: 100% !important;
+}
+.fullwidth { 
+	width: 100vw;
+	position: relative;
+	right: -o-calc(-50vw + 50%);
+	right: calc(-50vw + 50%);
+}
+.fullwidth:before {
+		content: " ";
+		display: table;
+	}
+.fullwidth:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+@media (max-width: 767px) {
+.fullwidth {
+		width: auto;
+		margin-right: -15px;
+		margin-left: -15px;
+		right: inherit
+}
+		}
+.flex-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
+
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+.flex-container.vertical-stretch {
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+	}
+.flex-container.vertical-start {
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+	}
+.flex-container.vertical-center {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+.flex-container.vertical-end {
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+	}
+.flex-container.horizontal-start {
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+	}
+.flex-container.horizontal-center {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+.flex-container.horizontal-end {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+.flex-container.grid {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+.flex-container.grid .flex-item {
+			padding: 15px;
+		}
+.video-wrapper .video {
+		position: relative;
+		padding-bottom: 52%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+.video-wrapper .video iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Prompt:300,400,600,700,800&subset=thai');
+@import url('https://fonts.googleapis.com/earlyaccess/notokufiarabic.css');
+
+body .node * {
+	font-family: 'Open Sans',sans-serif;
+}
+
+:lang(ar) body,
+:lang(ar-SA) body,
+:lang(ar) body .node *,
+:lang(ar-SA) body .node * {
+  font-family: 'Open Sans', 'Noto Kufi Arabic', sans-serif;
+}
+
+:lang(cn) body,
+:lang(zh) body,
+:lang(cn) body .node *,
+:lang(zh) body .node *,
+:lang(zh-CN) body .node *,
+:lang(zh-hans) body .node *,
+:lang(zh-hans-CN) body .node * {
+  font-family: 'Open Sans', 'Microsoft YaHei', 'SimHei', Sans-serif;
+}
+
+:lang(tw) body,
+:lang(hk) body,
+:lang(tw) body .node *,
+:lang(hk) body .node *,
+:lang(zh-HK) body .node *,
+:lang(zh-TW) body .node *,
+:lang(zh-hant) body .node *,
+:lang(zh-hant-HK) body .node *,
+:lang(zh-hant-TW) body .node * {
+  font-family: 'Open Sans', 'Microsoft JhengHei', 'SimHei', Sans-serif;
+}
+
+:lang(ko) body,
+:lang(ko) body .node *,
+:lang(ko-KR) body .node * {
+  font-family: 'Open Sans', 'Malgun Gothic', Sans-serif;
+}
+
+:lang(jp) body,
+:lang(jp) body .node *,
+:lang(ja-JP) body .node * {
+  font-family: 'Open Sans', 'Meiryo', Sans-serif;
+}
+
+:lang(th) body,
+:lang(th) body .node *,
+:lang(th-TH) body .node * {
+  font-family: 'Open Sans', 'Prompt', Sans-serif;
+} */
+/* MODULE */
+/* This file contains very basic styles. */
+.field-item .section-content {
+		border-top: 1px solid rgba(0,0,0,0.05);
+		border-width: 1px 0 0;
+		border-style: solid;
+		-o-border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, 0) 100%) 2%;
+		   border-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, 0))) 2%;
+		   border-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, 0) 100%) 2%;
+	}
+@media (max-width: 767px) {
+.field-item .section-content {
+			padding: 30px 0
+	}
+		}
+@media (min-width: 768px) {
+.field-item .section-content {
+			padding: 6% 0
+	}
+		}
+.field-item .section-content p,
+		.field-item .section-content ul,
+		.field-item .section-content ol {
+			margin-bottom: 1.2em;
+		}
+.field-item .section-content li {
+			padding-left: 0;
+			margin-bottom: 0.4em;
+		}
+.field-item .section-content ul.bullet-points {
+			list-style: none;
+			margin: 0;
+			margin-bottom: 1.2em;
+			padding: 0 20px 0 0;
+		}
+.field-item .section-content ul.bullet-points li {
+				position: relative;
+				padding-left: 0;
+				margin-bottom: 0.4em;
+			}
+.field-item .section-content ul.bullet-points li:before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 8px;
+					right: -16px;
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: #007DB3;
+				}
+.field-item .section-content h2,
+		.field-item .section-content h3,
+		.field-item .section-content h4,
+		.field-item .section-content h5 {
+			color: #202020;
+			line-height: 1.1em;
+		}
+.field-item .section-content .btn {
+			background-color: #007DB3;
+		}
+.field-item .section-content .btn:hover,
+			.field-item .section-content .btn:focus {
+				background-color: #1D0C58;
+			}
+.field-item .section-content .section-head {
+			text-align: center;
+			padding-bottom: 10px;
+		}
+.field-item .section-content .section-head h2.title {
+				color: #202020;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-align: center;
+				margin-bottom: 0.5em;
+				font-size: 24px;
+			}
+@media (min-width: 768px) {
+.field-item .section-content .section-head h2.title { font-size: 26px
+			}
+		}
+@media (min-width: 992px) {
+.field-item .section-content .section-head h2.title { font-size: 28px
+			}
+		}
+@media (min-width: 1200px) {
+.field-item .section-content .section-head h2.title { font-size: 32px
+			}
+		}
+.field-item .section-content .section-head h2.title .m-title {
+					display: block;
+					text-align: right;
+				}
+.field-item .section-content .section-head .desc {
+				max-width: 860px;
+				margin-right: auto;
+				margin-left: auto;
+				color: #303030;
+				font-size: 14px;
+			}
+@media (min-width: 768px) {
+.field-item .section-content .section-head .desc { font-size: 16px
+			}
+		}
+@media (min-width: 992px) {
+.field-item .section-content .section-head .desc { font-size: 18px
+			}
+		}
+.field-item .section-content .section-body .collapsible-item {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+@media (min-width: 768px) {
+.field-item .section-content .section-body .collapsible-item {
+					display: block;
+					padding: 0
+			}
+		}
+.field-item .section-content .cta-container {
+			margin: 1em 0;
+			text-align: center;
+			
+		}
+.field-item .section-content .cta-container a {
+				display: inline-block;
+			}
+.field-item .section-content .cta-container a.btn {
+					min-width: 290px;
+					padding: 10px 6px;
+					background-color: #007DB3;
+					margin-top: 3px;
+					margin-bottom: 12px;
+					line-height: 1.1;
+				}
+@media (min-width: 992px) {
+.field-item .section-content .cta-container a.btn {
+						padding: 14px 8px
+				}
+		}
+.field-item .section-content .cta-container a.btn:hover,
+					.field-item .section-content .cta-container a.btn:focus {
+						background-color: #1D0C58;
+					}
+.field-item .section-content .cta-container a.btn .btn-label {
+						padding: 0 0 4px 0;
+						font-size: 15px;
+						font-weight: 700;
+					}
+@media (min-width: 992px) {
+.field-item .section-content .cta-container a.btn .btn-label {
+							padding: 0 0 6px 0;
+							font-size: 16px
+					}
+		}
+.field-item .section-content .cta-container a.btn .btn-sub {
+						font-size: 10px;
+						font-weight: 400;
+					}
+.field-item .section-content .cta-container a.text {
+					font-weight: 600;
+					text-transform: uppercase;
+					text-decoration: underline;
+				}
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+.sprite-icon {
+  background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/sprites/sprite-17325454.svg');
+}
+.no-svg .sprite-icon {
+  background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/sprites/sprite-17325454.png');
+
+}
+.icon--kaplan-accommodation {
+  width: 102px;
+  height: 102px;
+  background-position: 0 0;
+}
+.icon--kaplan-course {
+  width: 102px;
+  height: 102px;
+  background-position: 50% 0;
+}
+.icon--kaplan-destination {
+  width: 102px;
+  height: 102px;
+  background-position: 0 100%;
+}
+.icon--kaplan-personalisation {
+  width: 102px;
+  height: 102px;
+  background-position: 50% 100%;
+}
+.icon--kaplan-school {
+  width: 102px;
+  height: 102px;
+  background-position: 100% 0;
+}
+.field-item .section--hero {
+		padding: 0;
+	}
+.field-item .section--hero .hero .hero-item-container {
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+			}
+.field-item .section--hero .hero .hero-item-container .hero-image {
+					position: relative;
+					background-color: #000;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+				}
+.field-item .section--hero .hero .hero-item-container .hero-image * {
+						width: 100%;
+						height: 100%;
+					}
+.field-item .section--hero .hero .hero-item-container .hero-image .item-bg {
+						background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-xs.jpg');
+						background-image: -webkit-image-set(
+							url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-xs.jpg') 1x,
+							url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-xs@2x.jpg') 2x
+						);
+						background-image: image-set(
+							url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-xs.jpg') 1x,
+							url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-xs@2x.jpg') 2x
+						);
+					}
+@media (max-width: 767px) {
+.field-item .section--hero .hero .hero-item-container .hero-image .item-bg {
+							background-position: center top
+					}
+		}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-image .item-bg {
+							background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-md.jpg');
+							background-image: -webkit-image-set(
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-md.jpg') 1x,
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-md@2x.jpg') 2x
+							);
+							background-image: image-set(
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-md.jpg') 1x,
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-md@2x.jpg') 2x
+							)
+					}
+		}
+@media (min-width: 1200px) {
+.field-item .section--hero .hero .hero-item-container .hero-image .item-bg {
+							background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-lg.jpg');
+							background-image: -webkit-image-set(
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-lg.jpg') 1x,
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-lg@2x.jpg') 2x
+							);
+							background-image: image-set(
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-lg.jpg') 1x,
+								url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-hero-lg@2x.jpg') 2x
+							)
+					}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-le,
+					.field-item .section--hero .hero .hero-item-container .hero-image .pattern-ri {
+						position: absolute;
+						z-index: 1;
+						bottom: 0;
+						height: auto;
+					}
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-le img, .field-item .section--hero .hero .hero-item-container .hero-image .pattern-ri img {
+							width: 100%;
+							height: auto;
+						}
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-le {
+						right: 0;
+						width: 68%;
+					}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-le {
+							width: 40%
+					}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-ri {
+						left: 0;
+						width: 32%;
+					}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-image .pattern-ri {
+							width: 25%
+					}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-text {
+					color: #FFFFFF;
+				}
+/* background-size: 100% 100%;
+					background: -moz-linear-gradient(top,  rgba(10,94,133,0) 0%, rgba(10,94,133,0) 50%, rgba(10,94,133,0.75) 100%);
+					background: -webkit-linear-gradient(top,  rgba(10,94,133,0) 0%,rgba(10,94,133,0) 50%,rgba(10,94,133,0.75) 100%);
+					background: linear-gradient(to bottom,  rgba(10,94,133,0) 0%,rgba(10,94,133,0) 50%,rgba(10,94,133,0.75) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c18a24', endColorstr='#bfc18a24',GradientType=0 ); */
+@media (max-width: 767px) {
+.field-item .section--hero .hero .hero-item-container .hero-text {
+						padding: 42% 0 0 0;
+						background: rgba(0,0,0,0.1)
+				}
+		}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text {
+						padding: 24% 0 0 0
+				}
+		}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-text {
+						padding: 18% 0 0 0
+				}
+		}
+@media (min-width: 1200px) {
+.field-item .section--hero .hero .hero-item-container .hero-text {
+						padding: 16% 0 0 0
+				}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner {
+						position: relative;
+					}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title {
+							margin-bottom: 0;
+						}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title {
+								width: calc(100% - 100px)
+						}
+		}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title {
+								width: calc(100% - 120px)
+						}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner {
+								display: inline-block;
+								line-height: 1;
+								color: #F0F0F0;
+								text-transform: uppercase;
+								font-weight: 800;
+								text-shadow: 0px -2px 36px rgba(193,138,36,0.75);
+							}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner span {
+									display: block;
+								}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .title {
+									font-size: 42px;
+									letter-spacing: -0.02em;
+									padding-bottom: 0.1em;
+								}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .title {
+										font-size: 56px;
+										letter-spacing: -0.02em
+								}
+		}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .title {
+										font-size: 82px;
+										letter-spacing: -0.03em
+								}
+		}
+@media (min-width: 1200px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .title {
+										font-size: 96px;
+										letter-spacing: -0.04em
+								}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .strapline {
+									padding: 0;
+									font-size: 16px;
+									line-height: 1.28571428;
+								}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .strapline {
+										font-size: 20px
+								}
+		}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .strapline {
+										font-size: 28px
+								}
+		}
+@media (min-width: 1200px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner h1.campaign-title .title-inner .strapline {
+										font-size: 36px
+								}
+		}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								float: none
+						}
+		}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn {
+									position: relative;
+									z-index: 1;
+									font-size: 13px !important;
+									color: #FFFFFF;
+									text-transform: uppercase;
+									font-weight: 700;
+									line-height: 1.1;
+									padding: 1.25em;
+									margin: 1em 0;
+									max-width: 250px;
+									overflow: hidden;
+									-webkit-box-align: center;
+									    -ms-flex-align: center;
+									        align-items: center;
+									-webkit-box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.75);
+									        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.75);
+								}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn.primary {
+										background-color: #007DB3;
+										border: none;
+									}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn.main-cta-ani {
+										background: -webkit-gradient(linear, left top, right top, from(#007DB3), color-stop(#007DB3), color-stop(#00E4FF), color-stop(#007DB3), to(#007DB3));
+										background: linear-gradient(-270deg, #007DB3, #007DB3, #00E4FF, #007DB3, #007DB3);
+										background-size: 1000% 1000%;
+										-webkit-animation: Gradation-Ani 6s ease infinite;
+										animation: Gradation-Ani 6s ease infinite;
+									}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn:before {
+										content: '';
+										position: absolute;
+										z-index: -1;
+										top: 0;
+										right: 0;
+										width: 0;
+										height: 100%;
+										background-color: #240F6E;
+										-webkit-transition: width .3s;
+										transition: width .3s;
+									}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn:hover {
+										border-color: #240F6E;
+
+									}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn:hover:before {
+											width: 100%;
+										}
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn span {
+										-webkit-box-flex: 0;
+										    -ms-flex: 0 0 100%;
+										        flex: 0 0 100%;
+										max-width: 100%;
+									}
+@media (min-width: 768px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn {
+										width: 120px;
+										height: 120px;
+										border-radius: 50%
+								}
+		}
+@media (min-width: 992px) {
+.field-item .section--hero .hero .hero-item-container .hero-text .hero-inner .hero-cta .btn.hero-btn {
+										width: 150px;
+										height: 150px;
+										font-size: 16px !important
+								}
+		}
+@media (min-width: 1200px) {
+		}
+@media (min-width: 1600px) {
+		}
+.field-item .section--hero .student-sign {
+			position: absolute;
+			z-index: 2;
+			top: 12px;
+			left: 12px;
+			color: #FFFFFF;
+			font-size: 13px;
+			padding: 0;	
+			text-align: left;
+
+			display: none;
+		}
+.field-item .section--hero .student-sign img {
+				height: 26px;
+			}
+@media (min-width: 768px) {
+.field-item .section--hero .student-sign img {
+					height: 30px
+			}
+		}
+@media (min-width: 1200px) {
+.field-item .section--hero .student-sign img {
+					height: 34px
+			}
+		}
+/* Gradient Animation */
+@-webkit-keyframes Gradation-Ani {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+@keyframes Gradation-Ani { 
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+.field-item .section--package {
+		background-color: #F0F0F0;
+		/* padding-bottom: 0; */
+		border-top: none;
+	}
+.field-item .section--package .package .section-head span {
+					display: block;
+				}
+.field-item .section--package .package .section-head span.highlight {
+						font-weight: 700;
+					}
+.field-item .section--package .package .flex-item {
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 100%;
+				        flex: 0 0 100%;
+				max-width: 100%;
+				padding: 0 15px 15px 15px;
+			}
+@media (min-width: 768px) {
+.field-item .section--package .package .flex-item {
+					-webkit-box-flex: 0;
+					    -ms-flex: 0 0 33.33333333%;
+					        flex: 0 0 33.33333333%;
+					max-width: 33.33333333%;
+					padding: 0 8px 15px 8px
+			}
+		}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item {
+					padding: 0 15px 15px 15px
+			}
+		}
+.field-item .section--package .package .flex-item .item-box {
+					background-color: #FFFFFF;
+					-webkit-box-shadow: -1px 1px 15px rgba(0,0,0,.1);
+					        box-shadow: -1px 1px 15px rgba(0,0,0,.1);
+					padding: 18px;
+					height: 100%;
+				}
+@media (min-width: 768px) {
+.field-item .section--package .package .flex-item .item-box {
+						-webkit-box-shadow: 1px 90px 95px -62px rgba(0,0,0,.2), 0 25px 65px 0 rgba(0,0,0,0.05);
+						        box-shadow: 1px 90px 95px -62px rgba(0,0,0,.2), 0 25px 65px 0 rgba(0,0,0,0.05)
+				}
+		}
+.field-item .section--package .package .flex-item .item-box .image-container {
+						position: relative;
+						overflow: hidden;
+						margin: -18px -18px 1.2em -18px;
+					}
+.field-item .section--package .package .flex-item .item-box .image-container:before {
+							content: '';
+							float: right;
+							padding-bottom: 42%;
+						}
+@media (min-width: 768px) {
+.field-item .section--package .package .flex-item .item-box .image-container:before {
+								padding-bottom: 62%
+						}
+		}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item .item-box .image-container:before {
+								padding-bottom: 60%
+						}
+		}
+.field-item .section--package .package .flex-item .item-box .image-container:after {
+							content: '';
+							display: table;
+							clear: both;
+						}
+.field-item .section--package .package .flex-item .item-box .image-container .image-inner {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+						}
+.field-item .section--package .package .flex-item .item-box .image-container .image-inner img {
+								position: absolute;
+								top: 50%;
+								right: 50%;
+								-webkit-transform: translate(50%, -50%);
+								        transform: translate(50%, -50%);
+							}
+.field-item .section--package .package .flex-item .item-box .image-container .title {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							top: 0;
+							right: 0;
+							z-index: 2;
+						}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay {
+								height: 100%;
+								-webkit-box-align: end;
+								    -ms-flex-align: end;
+								        align-items: flex-end;
+								color: #FFFFFF;
+								background: rgba(25,20,43,.1);
+								background: -webkit-gradient(linear,right top, right bottom,color-stop(0, rgba(25,20,43,.1)),color-stop(50%, rgba(25,20,43,.1)),to(rgba(25,20,43,.75)));
+								background: linear-gradient(to bottom,rgba(25,20,43,.1) 0,rgba(25,20,43,.1) 50%,rgba(25,20,43,.75) 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0019142b',endColorstr='#bf19142b',GradientType=0);
+							}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner {
+									-webkit-box-flex: 0;
+									    -ms-flex: 0 0 100%;
+									        flex: 0 0 100%;
+									max-width: 100%;
+									padding: 15px;
+								}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner {
+										padding: 20px
+								}
+		}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .course-title {
+										font-weight: 600;
+										font-size: 14px;
+									}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .course-title {
+											font-size: 15px
+									}
+		}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .location {
+										font-weight: 700;
+										text-transform: uppercase;
+										margin-top: 0.25em;
+										font-size: 18px;
+									}
+@media (min-width: 768px) {
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .location {
+											font-size: 20px
+									}
+		}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .location {
+											margin-top: 0.25em;
+											font-size: 24px
+									}
+		}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .more {
+										position: relative;
+										display: block;
+										float: right;
+										color: #00E4FF;
+										font-size: 12px;
+										font-weight: 700;
+										text-transform: uppercase;
+										height: 1px;
+										opacity: 0;
+										filter: alpha(opacity=0);
+										-webkit-transition: all .3s;
+										transition: all .3s;
+									}
+.field-item .section--package .package .flex-item .item-box .image-container .title .overlay--inner .more:before {
+											content: '';
+											position: absolute;
+											background-color: #00E4FF;
+											width: 100%;
+											height: 2px;
+											top: 0;
+											
+										}
+.field-item .section--package .package .flex-item .item-box .image-container:hover .overlay, .field-item .section--package .package .flex-item .item-box .image-container:focus .overlay {
+								text-decoration: none;
+								background: rgba(36,15,110,.6);
+							}
+.field-item .section--package .package .flex-item .item-box .image-container:hover .overlay--inner .more, .field-item .section--package .package .flex-item .item-box .image-container:focus .overlay--inner .more {
+										height: 28px;
+										margin-top: 10px;
+										padding-top: 10px;
+										opacity: 1;
+										filter: alpha(opacity=100);
+									}
+@media (max-width: 991px) {
+.field-item .section--package .package .flex-item .item-box .desc-container ul.bullet-points {
+								margin-bottom: 0.75em;
+								padding: 0 13px 0 0
+						}
+		}
+.field-item .section--package .package .flex-item .item-box .desc-container ul.bullet-points li {
+								line-height: 1.42857143;
+							}
+@media (max-width: 991px) {
+.field-item .section--package .package .flex-item .item-box .desc-container ul.bullet-points li {
+									font-size: 13px;
+									line-height: 1.28571428
+							}
+		}
+.field-item .section--package .package .flex-item .item-box .price-container {
+						text-align: center;
+						color: #404040;
+					}
+.field-item .section--package .package .flex-item .item-box .price-container .from {
+							font-size: 13px;
+						}
+.field-item .section--package .package .flex-item .item-box .price-container .price {
+							font-size: 20px;
+							color: #503F8B;
+							font-weight: 600;
+							text-transform: uppercase;
+						}
+.field-item .section--package .package .flex-item .item-box .price-container .price-info {
+							font-size: 13px;
+						}
+.field-item .section--package .package .flex-item .item-box .price-container .price-info .was {
+								text-decoration: line-through;
+							}
+.field-item .section--package .package .flex-item .item-box .price-container .price-info .divide {
+								color: #AAAAAA;
+							}
+.field-item .section--package .package .flex-item .item-box .price-container .price-info .save {
+								color: #E55302;
+								font-weight: 600;
+							}
+.field-item .section--package .package .flex-item .item-box .cta-container {
+						margin: 0.5em 0 0 0;
+					}
+@media (min-width: 992px) {
+.field-item .section--package .package .flex-item .item-box .cta-container {
+							margin: 1em 0
+					}
+		}
+.field-item .section--package .package .flex-item .item-box .cta-container a.btn {
+							min-width: auto;
+							max-width: 260px;
+							width: 100%;
+							margin: 3px 0 0 0;
+							border: 1px solid transparent;
+						}
+.field-item .section--package .package .flex-item .item-box .cta-container a.btn:hover {
+								border: 1px solid transparent;
+							}
+.field-item .section--package .package .note {
+				margin-top: 1em;
+				text-align: center;
+			}
+.field-item .section--package .package .note a {
+					font-size: 15px;
+				}
+.field-item .section--package .package .note .icon-wrapper {
+					margin-top: 1em;
+				}
+.field-item .section--package .package .note .icon-wrapper a {
+						display: inline-block;
+						font-size: 32px;
+						color: #FFFFFF;
+						line-height: 40px;
+						width: 60px;
+						height: 60px;
+						padding-top: 10px;
+						background-color: #606060;
+						text-decoration: none;
+					}
+.field-item .section--package .package .note .icon-wrapper a:hover {
+							background-color: #202020;
+							padding-top: 20px;
+						}
+.field-item .section--process {
+		background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-process-xs.jpg');
+	}
+@media (min-width: 768px) {
+.field-item .section--process {
+			background-attachment: fixed;
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-process-sm.jpg')
+	}
+		}
+@media (min-width: 992px) {
+.field-item .section--process {
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-process-md.jpg')
+	}
+		}
+@media (min-width: 1200px) {
+.field-item .section--process {
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-process-lg.jpg')
+	}
+		}
+@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (                -webkit-min-device-pixel-ratio: 2),
+			only screen and (                min-resolution: 192dpi),
+			only screen and (                min-resolution: 2dppx) {
+.field-item .section--process {
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-process@2x.jpg')
+	}
+		}
+@media (max-width: 767px) {
+.field-item .section--process .process .flex-container.grid {
+					margin-top: -30px
+			}
+		}
+.field-item .section--process .process .flex-item {
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 100%;
+				        flex: 0 0 100%;
+				max-width: 100%;
+				padding: 0 15px 15px 15px;
+				
+			}
+.field-item .section--process .process .flex-item .item-box {
+					background: radial-gradient(ellipse at center,  rgba(242,242,213,0.8) 0%,rgba(242,242,213,0) 80%,rgba(242,242,213,0) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33a5ffeb', endColorstr='#00a5ffeb',GradientType=1 );
+					position: relative;
+					height: 100%;
+					text-align: center;
+					padding: 0 10px;
+				}
+.field-item .section--process .process .flex-item .item-box .icon-container {
+						display: inline-block;
+						background: #FFFFFF;
+						margin-bottom: 1.5em;
+						border-radius: 50%;
+						-webkit-box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.15);
+						        box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.15);
+					}
+@media (max-width: 767px) {
+.field-item .section--process .process .flex-item .item-box .icon-container {
+							-webkit-transform: scale(0.8);
+							        transform: scale(0.8);
+							margin: 0 -1.25em 0.5em 0;
+							float: right
+					}
+		}
+.field-item .section--process .process .flex-item .item-box .icon-container .sprite-icon {
+							display: inline-block;
+							-webkit-transform: scale(0.6);
+							        transform: scale(0.6);
+						}
+.field-item .section--process .process .flex-item .item-box .desc-container {
+						position: relative;
+						text-shadow: 0px 2px 12px rgba(242,242,213,1);
+					}
+@media (max-width: 767px) {
+.field-item .section--process .process .flex-item .item-box .desc-container {
+							text-align: right;
+							padding: 30px 8px 5px 8px;
+							overflow: hidden
+					}
+		}
+.field-item .section--process .process .flex-item .item-box .desc-container * {
+							color: #303030;
+						}
+.field-item .section--process .process .flex-item .item-box .desc-container .title {
+							font-size: 14px;
+							font-weight: 800;
+							text-transform: uppercase;
+							margin: 0 0 0.2em 0;
+						}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .title {
+								font-size: 16px
+						}
+		}
+@media (min-width: 992px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .title {
+								font-size: 18px
+						}
+		}
+.field-item .section--process .process .flex-item .item-box .desc-container .strapline {
+							position: relative;
+							font-size: 13px;
+							font-weight: 600;
+							margin-bottom: 0.75em;
+						}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .strapline {
+								font-size: 14px
+						}
+		}
+@media (min-width: 992px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .strapline {
+								font-size: 15px
+						}
+		}
+@media (max-width: 767px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .strapline {
+								margin-bottom: 0.2em;
+								line-height: 1.2
+						}
+		}
+.field-item .section--process .process .flex-item .item-box .desc-container .desc {
+							display: none;
+							margin: 0;
+							font-size: 12px;
+						}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .desc {
+								display: block;
+								font-size: 13px
+						}
+		}
+@media (min-width: 992px) {
+.field-item .section--process .process .flex-item .item-box .desc-container .desc {
+								font-size: 14px
+						}
+		}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item {
+					-webkit-box-flex: 0;
+					    -ms-flex: 0 0 33.33333333%;
+					        flex: 0 0 33.33333333%;
+					max-width: 33.33333333%
+				
+			}
+		}
+.field-item .section--process .process .flex-item:nth-child(2) .item-box:before, .field-item .section--process .process .flex-item:nth-child(3) .item-box:before {
+							position: absolute;
+							content: "";
+							width: 100%;
+							height: 2px;
+							top: -15px;
+							right: 0;
+							border-top: 1px dotted rgba(0,0,0,0.25);
+						}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item:nth-child(2) .item-box:before, .field-item .section--process .process .flex-item:nth-child(3) .item-box:before {
+								width: 2px;
+								height: 100%;
+								border-right: 1px dotted rgba(0,0,0,0.25);
+								right: -16px;
+								top: 0
+						}
+		}
+.field-item .section--process .process .flex-item:nth-child(2) .item-box:after, .field-item .section--process .process .flex-item:nth-child(3) .item-box:after {
+							position: absolute;
+							content: "+";
+							width: 100%;
+							height: 48px;
+							top: -49px;
+							right: 0;
+							font-size: 48px;
+							color: #0A5E85;
+						}
+@media (min-width: 768px) {
+.field-item .section--process .process .flex-item:nth-child(2) .item-box:after, .field-item .section--process .process .flex-item:nth-child(3) .item-box:after {
+								width: 60px;
+								height: 60px;
+								right: -45px;
+								top: calc(50% - 30px);
+								font-size: 60px;
+								line-height: 60px
+						}
+		}
+.field-item .section--process .process .cta-container {
+				margin-bottom: 0;
+			}
+.field-item .section--process .process .cta-container p {
+					color: #404040;
+				}
+.field-item .section--destinations {
+		background-color: #F0F0F0;
+	}
+.field-item .section--destinations .destinations .section-head span {
+					display: block;
+				}
+.field-item .section--destinations .destinations .section-body .flex-container {
+
+					-ms-flex-direction: row-reverse;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: reverse;
+					        flex-direction: row-reverse;
+				}
+.field-item .section--destinations .destinations .section-body .flex-container .flex-item {
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 100%;
+						        flex: 0 0 100%;
+						max-width: 100%;
+					}
+@media (min-width: 768px) {
+.field-item .section--destinations .destinations .section-body .flex-container .flex-item {
+							-webkit-box-flex: 0;
+							    -ms-flex: 0 0 50%;
+							        flex: 0 0 50%;
+							max-width: 50%
+					}
+		}
+@media (min-width: 992px) {
+		}
+@media (min-width: 768px) {
+.field-item .section--destinations .destinations .section-body .flex-container .flex-item .cta-container {
+								text-align: right;
+								padding-right: 20px
+						}
+		}
+.field-item .section--other-product {
+		background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-xs.jpg');
+		background-image: -webkit-image-set(
+			url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-xs.jpg') 1x,
+			url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-xs@2x.jpg') 2x
+		);
+		background-image: image-set(
+			url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-xs.jpg') 1x,
+			url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-xs@2x.jpg') 2x
+		);
+	}
+@media (min-width: 768px) {
+.field-item .section--other-product {
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-md.jpg');
+			background-image: -webkit-image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-md.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-md@2x.jpg') 2x
+			);
+			background-image: image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-md.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-md@2x.jpg') 2x
+			)
+	}
+		}
+@media (min-width: 1200px) {
+.field-item .section--other-product {
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-lg.jpg');
+			background-image: -webkit-image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-lg.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-lg@2x.jpg') 2x
+			);
+			background-image: image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-lg.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-pattern-lg@2x.jpg') 2x
+			)
+	}
+		}
+.field-item .section--other-product .other-product .course-school--container {
+				position: relative;
+			}
+.field-item .section--other-product .other-product .course-school--container .panel {
+					border: none;
+					-webkit-box-shadow: none;
+					        box-shadow: none;
+					background-color: transparent;
+				}
+.field-item .section--other-product .other-product .course-school--container .panel.flex-item {
+						-webkit-box-flex: 0;
+						    -ms-flex: 0 0 100%;
+						        flex: 0 0 100%;
+						max-width: 100%;
+						margin: 0;
+						padding: 5px 15px;
+					}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel.flex-item {
+							-webkit-box-flex: 0;
+							    -ms-flex: 0 0 50%;
+							        flex: 0 0 50%;
+							max-width: 50%;
+							padding: 0 15px
+					}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading,
+					.field-item .section--other-product .other-product .course-school--container .panel h4.panel-title {
+						padding: 0;
+						margin: 0;
+					}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a {
+							position: relative;
+							display: block;
+							padding: 20px;
+							min-height: 180px;
+							color: #FFFFFF;
+							text-decoration: none;
+							-webkit-filter: grayscale(100%);
+							        filter: grayscale(100%);
+						}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a {
+								min-height: 200px
+						}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner {
+								position: absolute;
+								display: block;
+								right: 0;
+								bottom: 0;
+								width: 100%;
+								padding: 1.5em;
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__title, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__title {
+									display: block;
+									font-size: 16px;
+									text-transform: uppercase;
+									margin-bottom: 0.25em;
+									font-weight: 700;
+								}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__title, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__title {
+										margin-bottom: 0.5em;
+										font-size: 20px
+								}
+		}
+@media (min-width: 992px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__title, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__title {
+										font-size: 24px
+								}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__desc, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__desc {
+									font-size: 13px;
+									font-weight: 400;
+								}
+@media (min-width: 992px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__desc, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__desc {
+										font-size: 14px
+								}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__link, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__link {
+									margin-top: 0.5em;
+									font-size: 13px;
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__link .more, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__link .more {
+										display: none;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__link .more:before, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__link .more:before {
+											content: "\e683";
+											font-family: kie;
+											display: inline-block;
+											margin-left: 4px;
+											vertical-align: -2px;
+										}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__link .less, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__link .less {
+										display: block;
+										border-bottom: 2px solid transparent;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a .image-box__btn-inner .image-box__link .less:before, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a .image-box__btn-inner .image-box__link .less:before {
+											content: "\e682";
+											font-family: kie;
+											display: inline-block;
+											margin-left: 4px;
+										}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a:before, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a:before {
+								display: block;
+								position: absolute;
+								content: "";
+								width: 100%;
+								height: 100%;
+								top: 0;
+								right: 0;
+								left: 0;
+								bottom: 0;
+								background-size: cover;
+								background: rgba(25,20,43,.1);
+								background: -webkit-gradient(linear,right top, right bottom,color-stop(0, rgba(25,20,43,.1)),color-stop(40%, rgba(25,20,43,.1)),to(rgba(25,20,43,.75)));
+								background: linear-gradient(-180deg,rgba(25,20,43,.1) 0,rgba(25,20,43,.1) 40%,rgba(25,20,43,.75));
+								filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0019142b",endColorstr="#bf19142b",GradientType=0);
+								background-color: rgba(36,15,110,.6);
+								-webkit-transition: all .5s ease;
+								transition: all .5s ease;
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a:after, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a:after {
+								content: "";
+								position: absolute;
+								right: 54px;
+								bottom: -2px;
+								width: 0;
+								height: 0;
+								border-style: solid;
+								border-width: 0 15px 20px 15px;
+								border-color: transparent transparent #EEEEEE transparent;
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.collapsed, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.collapsed {
+								-webkit-filter: grayscale(0);
+								        filter: grayscale(0);
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.collapsed:before, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.collapsed:before {
+									background: rgba(25,20,43,.1);
+									background: -webkit-gradient(linear,right top, right bottom,color-stop(0, rgba(25,20,43,.1)),color-stop(40%, rgba(25,20,43,.1)),to(rgba(25,20,43,.75)));
+									background: linear-gradient(-180deg,rgba(25,20,43,.1) 0,rgba(25,20,43,.1) 40%,rgba(25,20,43,.75));
+									filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0019142b",endColorstr="#bf19142b",GradientType=0);
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.collapsed:after, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.collapsed:after {
+									content: none;
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.collapsed .image-box__link .more, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.collapsed .image-box__link .more {
+										display: inline-block;
+										color: #00E4FF;
+										border-bottom: 2px solid #00E4FF;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.collapsed .image-box__link .less, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.collapsed .image-box__link .less {
+										display: none;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a:hover:before, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a:hover:before {
+									background-color: rgba(36,15,110,.6);
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.image-box--course, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.image-box--course {
+								background-image: url('//assetlibs.kaplaninternational.com/_assets/about-benefits/images/hero-course.jpg');
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-heading a.image-box--school, .field-item .section--other-product .other-product .course-school--container .panel h4.panel-title a.image-box--school {
+								background-image: url('//assetlibs.kaplaninternational.com/_assets/about-benefits/images/hero-destination-us.jpg');
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse {
+						position: relative;
+						-webkit-box-shadow: 0px 30px 100px -42px rgba(0,0,0,.4);
+						        box-shadow: 0px 30px 100px -42px rgba(0,0,0,.4);
+					}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse {
+							width: calc(200% + 30px)
+					}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body {
+							background-color: #EEEEEE;
+							padding: 30px;
+
+						}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body h3.title {
+								font-weight: 700;
+								text-transform: uppercase;
+							}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item {
+								-webkit-box-flex: 0;
+								    -ms-flex: 0 0 100%;
+								        flex: 0 0 100%;
+								max-width: 100%;
+								padding: 15px;
+							}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item {
+									padding: 5px 15px
+							}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box {
+									height: 100%;
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box p, .field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box div, .field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box li {
+										font-size: 13px;
+										color: #404040;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .title {
+										position: relative;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .title a {
+											color: #404040;
+											font-size: 15px;
+											font-weight: 700;
+											text-transform: uppercase;
+										}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .title a span {
+												position: absolute;
+												display: inline-block;
+												right: 0;
+												top: 0;
+												padding: 0 0 8px 12px;
+												color: #404040;
+												font-size: 15px;
+												font-weight: 700;
+												text-transform: uppercase;
+												background-color: #EEEEEE;
+											}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .bullet-points,
+									.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .desc {
+										font-size: 13px;
+										margin-bottom: 0.5em;
+									}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item .item-box .link {
+										display: inline-block;
+										font-weight: 600;
+										font-size: 13px;
+										border-bottom: 1px solid #007DB3;
+										text-decoration: none;
+									}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item {
+									-webkit-box-flex: 0;
+									    -ms-flex: 0 0 33.33333333%;
+									        flex: 0 0 33.33333333%;
+									max-width: 33.33333333%
+							}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item {
+								border-top: 1px solid rgba(0,0,0,0.1);
+							}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item {
+									border-top: none;
+									border-right: 1px solid rgba(0,0,0,0.1)
+							}
+		}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .flex-item:first-child {
+									border-right: none;
+								}
+.field-item .section--other-product .other-product .course-school--container .panel .panel-collapse .panel-body .close {
+								position: absolute;
+								top: 15px;
+								left: 15px;
+								font-size: 18px;
+							}
+@media (min-width: 768px) {
+.field-item .section--other-product .other-product .course-school--container .panel:nth-child(2) .panel-collapse {
+								margin-right: calc(-100% - 30px)
+						}
+		}
+.field-item .section--difference .difference .flex-item {
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 50%;
+				        flex: 0 0 50%;
+				max-width: 50%;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+@media (min-width: 768px) {
+.field-item .section--difference .difference .flex-item {
+					-webkit-box-flex: 0;
+					    -ms-flex: 0 0 25%;
+					        flex: 0 0 25%;
+					max-width: 25%
+			}
+		}
+.field-item .section--difference .difference .flex-item .item-box {
+					text-align: center;
+				}
+.field-item .section--difference .difference .flex-item .item-box .icon-image {
+						margin: 0 auto;						
+					}
+.field-item .section--difference .difference .flex-item .item-box .icon-image img {
+							width: 60px;
+							height: 60px;
+						}
+@media (min-width: 992px) {
+.field-item .section--difference .difference .flex-item .item-box .icon-image img {
+								width: 80px;
+								height: 80px
+						}
+		}
+.field-item .section--difference .difference .flex-item .item-box .desc {
+						padding: 4px 4px 24px;
+						font-size: 13px;
+						line-height: 1.28571428;
+					}
+@media (min-width: 768px) {
+.field-item .section--difference .difference .flex-item .item-box .desc {
+							padding: 10px 15px;
+							font-size: 14px
+					}
+		}
+@media (min-width: 992px) {
+.field-item .section--difference .difference .flex-item .item-box .desc {
+							font-size: 15px
+					}
+		}
+.field-item .section--form-title {
+		border: none;
+		padding-bottom: 0;
+		background-color: rgba(36,15,110,1);
+	}
+.field-item .section--form-title .form-title .section-head .title,
+				.field-item .section--form-title .form-title .section-head .desc {
+					color: #FFFFFF;
+				}
+#wrapper section.block-webform {
+			background-position: center;
+			background-size: cover;			
+			background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-xs.jpg');
+			background-image: -webkit-image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-xs.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-xs@2x.jpg') 2x
+			);
+			background-image: image-set(
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-xs.jpg') 1x,
+				url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-xs@2x.jpg') 2x
+			);
+		}
+@media (min-width: 768px) {
+#wrapper section.block-webform {
+				background-attachment: fixed;
+				background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-md.jpg');
+				background-image: -webkit-image-set(
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-md.jpg') 1x,
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-md@2x.jpg') 2x
+				);
+				background-image: image-set(
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-md.jpg') 1x,
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-md@2x.jpg') 2x
+				)
+		}
+		}
+@media (min-width: 1200px) {
+#wrapper section.block-webform {
+				background-image: url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-lg.jpg');
+				background-image: -webkit-image-set(
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-lg.jpg') 1x,
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-lg@2x.jpg') 2x
+				);
+				background-image: image-set(
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-lg.jpg') 1x,
+					url('//assetlibs.kaplaninternational.com/_assets/vacation-2019/images/vacation2019-form-lg@2x.jpg') 2x
+				)
+		}
+		}
+@media (max-width: 767px) {
+#wrapper section.block-webform {
+				padding: 30px 0
+		}
+		}
+@media (min-width: 768px) {
+#wrapper section.block-webform {
+				padding: 4% 0
+		}
+		}
+#wrapper section.block-webform label input[type="radio"],
+				#wrapper section.block-webform label input[type="checkbox"] {
+					right: 0;
+					margin-right: 0;
+				}
+#wrapper section.block-webform label input[type="radio"]:focus, #wrapper section.block-webform label input[type="checkbox"]:focus {
+						outline: none;
+					}
+#wrapper section.block-webform .block-title,
+			#wrapper section.block-webform .block-content {
+				color: #FFFFFF;
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+@media (min-width: 768px) {
+#wrapper section.block-webform .block-title,
+			#wrapper section.block-webform .block-content {
+					max-width: 640px;
+					margin-right: auto;
+					margin-left: auto
+			}
+		}
+@media (min-width: 992px) {
+#wrapper section.block-webform .block-title,
+			#wrapper section.block-webform .block-content {
+					max-width: 720px
+			}
+		}
+@media (min-width: 1200px) {
+#wrapper section.block-webform .block-title,
+			#wrapper section.block-webform .block-content {
+					max-width: 800px
+			}
+		}
+#wrapper section.block-webform .block-title {
+				color: #FFFFFF;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 24px;
+				line-height: 1.1;
+				margin-bottom: 30px;
+			}
+@media (min-width: 768px) {
+#wrapper section.block-webform .block-title {
+					font-size: 26px
+			}
+		}
+@media (min-width: 992px) {
+#wrapper section.block-webform .block-title {
+					font-size: 28px
+			}
+		}
+@media (min-width: 1200px) {
+#wrapper section.block-webform .block-title {
+					font-size: 32px
+			}
+		}
+#wrapper section.block-webform .webform-client-form > div > .webform-component-checkboxes {
+						width: 100%;
+						margin-bottom: 0;
+						color: #404040;
+					}
+#wrapper section.block-webform .webform-client-form > div > .webform-component-checkboxes input[type="checkbox"] {
+							width: 17px;
+							height: 17px;
+							top: -2px;
+						}
+#wrapper section.block-webform .webform-client-form > div:before,
+				#wrapper section.block-webform .webform-client-form > div:after {
+					content: " ";
+					display: table
+				}
+#wrapper section.block-webform .webform-client-form > div:after {
+					clear: both
+				}
+#wrapper section.block-webform .webform-client-form .form-item.webform-component-markup h5.strapline {
+							font-size: 18px;
+							text-align: center;
+						}
+#wrapper section.block-webform .webform-client-form .form-item.webform-component-checkboxes {
+						margin-bottom: 1em;
+					}
+#wrapper section.block-webform .webform-client-form .form-item.webform-component-checkboxes label,
+						#wrapper section.block-webform .webform-client-form .form-item.webform-component-checkboxes label.option {
+							color: #FFFFFF;
+						}
+@media (min-width: 992px) {
+								#wrapper section.block-webform .webform-client-form .form-item.webform-component-checkboxes label:hover, #wrapper section.block-webform .webform-client-form .form-item.webform-component-checkboxes label.option:hover {
+									color: #FFC82E;
+								}
+		}
+#wrapper section.block-webform .webform-client-form fieldset.panel-default > .panel-body {
+							background-color: rgba(255,255,255,0.75);
+
+							padding: 30px 20px;
+						}
+@media (min-width: 768px) {
+#wrapper section.block-webform .webform-client-form fieldset.panel-default > .panel-body {
+								margin-top: 4%;
+								padding: 4% 30px
+						}
+		}
+#wrapper section.block-webform .webform-client-form fieldset.panel-default > .panel-heading {
+							padding-right: 0;
+							background: transparent;
+							font-weight: 700;
+							font-size: 16px;
+							text-transform: uppercase;
+							letter-spacing: .01em;
+							color: #FFFFFF;
+						}
+#wrapper section.block-webform .webform-client-form fieldset.panel-default > .panel-heading .panel-title {
+								font-size: 15px;
+							}
+@media (min-width: 768px) {
+#wrapper section.block-webform .webform-client-form fieldset.panel-default > .panel-heading .panel-title {
+									font-size: 16px
+							}
+		}
+#wrapper section.block-webform .webform-client-form fieldset.panel {
+						border: none;
+						background-color: transparent;
+						-webkit-box-shadow: none;
+						        box-shadow: none;
+					}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component {
+							margin-bottom: 1.5em;
+						}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-optionsmarkup label {
+									color: #404040;
+									font-size: 16px;
+									margin-bottom: 0;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component label {
+								font-weight: 400;
+								color: #404040;
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component input, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component button, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component select, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component textarea {
+								color: #202020;
+								font-size: 14px;
+								height: auto;
+								/* min-height: 38px; */
+								line-height: normal;
+								background-color: rgba(255,255,255,0.5);
+								border: 1px solid rgba(0,0,0,0.2);
+								float: none !important;
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component input:focus, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component button:focus, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component select:focus, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component textarea:focus {
+									-webkit-box-shadow: none;
+									        box-shadow: none;
+									background-color: rgba(255,255,255,1);
+									-webkit-transition: background-color .5s linear;
+									transition: background-color .5s linear;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component input:focus, #wrapper section.block-webform .webform-client-form fieldset.panel .webform-component textarea:focus {
+									
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component textarea.form-control {
+								line-height: 1.5;
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component ::-webkit-input-placeholder {
+								color: rgba(0,0,0,0.3);
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component ::-ms-input-placeholder {
+								color: rgba(0,0,0,0.3);
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component ::placeholder {
+								color: rgba(0,0,0,0.3);
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component .description {
+								margin-top: 4px;
+							}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-select:before {
+									display: block;
+									content: "▼";
+									color: #240F6E;
+									position: absolute;
+									font-size: 10px;
+									bottom: 12px;
+									left: 12px;
+									width: 10px;
+									height: 10px;
+									text-align: center;
+									line-height: 10px;
+									background-color: transparent;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-select:after {
+									
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-select select.form-select {
+									background-image: none;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-radios > label.control-label {
+									padding-right: 0;
+									padding-left: 0;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-radios .form-type-radio {
+									width: auto;
+									display: inline-block;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.panel .webform-component.webform-component-radios .form-type-radio > label.control-label {
+										padding-right: 20px;
+										padding-left: 30px;
+									}
+#wrapper section.block-webform .webform-client-form fieldset label {
+						display: block;
+						float: none;
+						width: 100%;
+						font-weight: 700;
+						min-height: 0;
+					}
+#wrapper section.block-webform .webform-client-form fieldset label.control-label {
+							padding-right: 0;
+							padding-left: 0;
+						}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component {
+						display: block;
+						float: right;
+						width: 100%;
+						margin-bottom: 33px;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component:last-child {
+							margin-bottom: 0;
+						}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component .description {
+							width: 100%;
+							float: none;
+							font-size: 12px;
+						}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component>.webform-datepicker,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component>select,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component>.form-textarea-wrapper,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component>input {
+						width: 100%;
+						float: none;
+						clear: both;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:before,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:after {
+						content: " ";
+						display: table;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:after {
+						clear: both;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:before,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:after {
+						content: " ";
+						display: table;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker:after {
+						clear: both;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component {
+						position: relative;
+						display: inline-block;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select select,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component select {
+						padding-left: 33px;
+						background: #fff url('//cdn.kaplaninternational.com/profiles/base_drupal_build/themes/kis_theme/images/select-arrow.png') left 6px center no-repeat;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component-date .form-group {
+						margin-bottom: 0;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select::before,
+					#wrapper section.block-webform .webform-client-form fieldset .webform-component-select::before {
+						display: none;
+						position: absolute;
+						bottom: 7px;
+						height: 20px;
+						left: 29px;
+						width: 1px;
+						content: " ";
+						background: #ddd;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select {
+						float: right;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select::before {
+						left: 31px;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .webform-calendar-icon {
+						vertical-align: top;
+						float: right;
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component--step-1--Questions-and-Comments--c-sfd-1454655804 .radio {
+						display: inline-block
+					}
+#wrapper section.block-webform .webform-client-form fieldset .webform-component--step-2--Date-of-Birth--c-sfd-1463042328 .webform-container-inline {
+						width: 100%
+					}
+#wrapper section.block-webform .webform-client-form fieldset div[class*='webform-component--step-1--Questions-and-Comments'] {
+						width: 100%
+					}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] {
+								width: 100%;
+							}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes {
+									width: 100%;
+
+									display: -webkit-box;
+									display: -ms-flexbox;
+									display: flex;
+
+									-webkit-box-orient: horizontal;
+									-webkit-box-direction: normal;
+									-ms-flex-flow: row wrap;
+									flex-flow: row wrap;
+									-ms-flex-direction: row;
+									flex-direction: row;
+									-ms-flex-wrap: wrap;
+									flex-wrap: wrap;
+
+									-ms-flex-pack: start;
+									-webkit-box-pack: start;
+									justify-content: flex-start;
+								}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] {
+										display: block;
+										width: auto;
+										min-height: 1px;
+										float: none;
+
+										-ms-flex-preferred-size: 0;
+										flex-basis: 0;
+										-ms-flex-positive: 1;
+										-webkit-box-flex: 1;
+										        flex-grow: 1;
+										-ms-flex: 0 0 32.33333333%;
+										flex: 0 0 32.33333333%;
+										max-width: 32.33333333%;
+										margin: 0 0 0 1%;
+										padding: 0;
+										cursor: pointer;
+									}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] input[type="checkbox"] {
+											bottom: 8px;
+											top: auto;
+											right: calc(50% - 8px);
+											width: auto;
+											min-height: auto;
+										}
+@media (min-width: 768px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] input[type="checkbox"] {
+												bottom: 18px
+										}
+		}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] input[type="radio"]:empty ~ label:before,
+										#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] input[type="checkbox"]:empty ~ label:before {
+											top: auto;
+											left: auto;
+											bottom : 10px; /* <- - - CUSTOM */
+											right : calc(50% - 9px); /* <- - - CUSTOM */
+										}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] input[type="checkbox"]:empty ~ label:after {
+											top: auto; /* <- - - CUSTOM */
+											left: auto; /* <- - - CUSTOM */
+											right: calc(50% - 3px); /* <- - - CUSTOM */
+											bottom: 15px; /* <- - - CUSTOM */
+										}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label {
+											margin: 0;
+											padding: 1px 1px 10px 1px;
+											background: rgba(255,255,255,0.2);
+											height: 100%;
+											cursor: pointer;
+										}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label:hover {
+												background: rgba(255,255,255,0.4);
+											}
+@media (min-width: 768px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label {
+												padding: 10px
+										}
+		}
+@media (min-width: 992px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label {
+												padding: 20px 10px
+										}
+		}
+@media (min-width: 992px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label {
+												-webkit-transition: all .1s ease-in-out;
+												transition: all .1s ease-in-out
+										}
+												#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label:hover {
+													-webkit-transform: scale(1.05);
+													        transform: scale(1.05);
+												}
+		}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label .bd-head {
+												display: none;
+											}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label img {
+												margin: 0 auto;
+												max-width: 128px;
+												width: 100%;
+											}
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label .bd-desc {
+												font-size: 11px;
+												padding: 10px 0 20px 0;
+												text-align: center;
+												font-weight: 700;
+											}
+@media (min-width: 768px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label .bd-desc {
+													font-size: 12px;
+											}
+		}
+@media (min-width: 992px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label .bd-desc {
+													font-size: 13px;
+											}
+		}
+@media (min-width: 1200px) {
+#wrapper section.block-webform .webform-client-form fieldset.webform-component-fieldset .webform-component-optionsmarkup[class*="webform-component--fieldset--Brochure-Downloaded"] .form-checkboxes div[class*='webform-component--fieldset--Brochure-Downloaded'] label .bd-desc {
+													font-size: 14px;
+											}
+		}
+@media (max-width: 1199px) {
+						#wrapper section.block-webform .webform-client-form fieldset fieldset div[class*='webform-component--step-1--Preferred-Start-Date'],
+						#wrapper section.block-webform .webform-client-form fieldset fieldset div[class*='webform-component--step-1--Preferred-Contact-Date'] {
+							width: 100%;
+						}
+		}
+@media (max-width: 767px) {
+#wrapper section.block-webform .webform-client-form fieldset {
+						/* margin-top: 20px; */
+				}
+						#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select .form-select {
+							padding-left: 16px;
+							padding-right: 7px;
+							background-position: left 1px center;
+						}
+		}
+@media (min-width: 768px) {
+						#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select::before,
+						#wrapper section.block-webform .webform-client-form fieldset .webform-component-select::before {
+							display: block;
+						}
+		}
+@media (min-width: 992px) and (max-width: 1199px) {
+						#wrapper section.block-webform .webform-client-form fieldset .left-component {
+							margin-left: 2%
+						}
+		}
+@media (min-width: 1200px) {
+						#wrapper section.block-webform .webform-client-form fieldset .webform-component {
+							width: 47%;
+						}
+						#wrapper section.block-webform .webform-client-form fieldset .webform-datepicker .form-type-select .form-select {
+							padding-left: 30px;
+							padding-right: 8px;
+						}
+						#wrapper section.block-webform .webform-client-form fieldset .left-component {
+							margin-left: 6%;
+						}
+		}
+#wrapper section.block-webform .webform-client-form .icon-ki-calendar:before {
+					content: " ";
+					right: 0;
+					top: 2px;
+					width: 30px;
+					height: 30px;
+					background: url('//cdn.kaplaninternational.com/profiles/base_drupal_build/themes/kis_theme/images/ico-calendar.png');
+					position: relative;
+					display: inline-block;
+				}
+#wrapper section.block-webform .webform-client-form .webform-submit {
+					width: 100%;
+					float: left;
+					font-size: 14px;
+					font-weight: 800;
+					background-color: #FFC82E;
+					color: #240F6E;
+					border: none;
+					margin: 1em 0;
+				}
+#wrapper section.block-webform .webform-client-form .webform-submit:hover {
+						border: none;
+						background-color: #240F6E;
+						color: #FFC82E;
+					}
+@media (max-width: 991px) {
+					#wrapper section.block-webform .webform-client-form fieldset {
+						margin-bottom: 25px;
+					}
+		}
+@media (max-width: 767px) {
+#wrapper section.block-webform .webform-client-form {
+					margin: 0 0 20px 0
+			}
+		}
+@media (min-width: 768px) {
+		}
+@media (min-width: 992px) {
+							#wrapper section.block-webform .webform-client-form > div > .webform-component-checkboxes label.option {
+								padding: 0 26px;
+							}
+							#wrapper section.block-webform .webform-client-form > div > .webform-component-checkboxes input[type="checkbox"] {
+								left: auto;
+								right: 0;
+							}
+					#wrapper section.block-webform .webform-client-form .webform-submit {
+						font-size: 16px;
+						max-width: 380px;
+					}
+		}
+@media (min-width: 1200px) {
+		}
+div {
+	
+}
+
+
+ 

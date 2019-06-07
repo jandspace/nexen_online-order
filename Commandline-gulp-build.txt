@@ -1,0 +1,59 @@
+* When you make a new repo * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Install NPM locally
+sudo npm install
+
+
+
+* When first run Gulp Watch has an error  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Remove fontawesome from gulpfile.js
+
+
+
+* GULP WATCH ERROR * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+*** Install Gulp locally
+sudo npm install gulp-cli -g 
+
+
+
+* [GULP BUILD ERROR * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+sudo chown -R joungmin.shin /usr/local/lib/node_modules
+sudo chown -R joungmin.shin /usr/local/bin
+sudo chown -R joungmin.shin /usr/local/share
+sudo npm install gulp-cli --global
+
+
+sudo chown -R joungmin.shin ~/.npm
+sudo chown -R joungmin.shin /Users/joungmin.shin/WebDev/KIE_Drupal/kiedru_higher-education/node_modules
+
+
+
+* When you need translation * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Go to gulp>locales folder and dulpicate market folder from 'en'
+2. Go to gulp>tasks folder and open 'localize.js'
+3. Change locales: ['en'] to locales: ['XX']
+4. Open terminal and run task 'gulp localizeDrupal'
+5. Preview the page by running 'gulp previewDist' then add Market code 'http://localhost:3000/transilation/XX/'
+
+
+
+
+* FOR ARABIC * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Run gulp arabic-css
+2. Go to /app/temp/styles-ar 
+3. Copy CSS for Arabic
+
+
+
+
+
+* Not to upload heavy folder/file (such as node_modules) * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Open a new document
+2. Add code
+	
+	# Created by .ignore support plugin
+	.gitignore
+	node_modules
+
+3. Save file as (.gitignore) in the project root

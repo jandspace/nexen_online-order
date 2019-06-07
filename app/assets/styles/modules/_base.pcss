@@ -1,0 +1,104 @@
+/* This file contains very basic styles. */
+
+/* Frame */
+
+
+.nx-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 64px;
+	background-color: $color-grey-b;
+	border-bottom: 1px solid $color-grey-f;
+	z-index: 9;
+}
+.nx-wrapper {
+	position: relative;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 64px;
+	background-color: $color-grey-b;
+
+	.nx-content-header {
+		-ms-flex-order: 0;
+		order: 0;
+		min-height: 100px;
+
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		background-color: #2f353e;
+
+	}
+
+	.nx-primary-sidebar {
+		position: relative;
+
+		-ms-flex-order: 1;
+		order: 1;
+		min-height: 50vh;
+
+		-ms-flex: 0 0 18%;
+		-webkit-box-flex: 0;
+		flex: 0 0 18%;
+		max-width: 18%;
+
+		background-color: orange;
+
+		.sidebar-inner {
+			padding: 30px;
+
+			&.fixed {
+				position: sticky;
+				left: 0;
+				top: 64px;
+				width: inherit;
+			}
+		}
+	}
+	.nx-secondary-sidebar {
+		-ms-flex-order: 3;
+		order: 3;
+		min-height: 50vh;
+
+		-ms-flex: 0 0 18%;
+		-webkit-box-flex: 0;
+		flex: 0 0 18%;
+		max-width: 18%;
+
+		.sidebar-inner {
+			padding: 30px;
+
+			&.fixed {
+				position: sticky;
+				left: 0;
+				top: 64px;
+				width: inherit;
+			}
+		}
+
+		background-color: skyblue;
+	}
+	.nx-content {
+		-ms-flex-order: 2;
+		order: 2;
+
+		-ms-flex: 0 0 64%;
+		-webkit-box-flex: 0;
+		flex: 0 0 64%;
+		max-width: 64%;
+
+	}
+}
+
+.nx-footer {
+	width: 100%;
+	min-height: 120px;
+	background-color: $color-grey-i;
+}

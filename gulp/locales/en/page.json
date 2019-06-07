@@ -1,0 +1,158 @@
+{
+	"lang": "en",
+	"css-link": "//assetlibs.kaplaninternational.com/kidrupal/www/en/summer-2018/v3/assets/styles/styles.css",
+
+	"hero": {
+		"strapline": "Time to travel. Time to learn. Time to live",
+		"title": "Now’s the Time",
+		"cta": "Contact an advisor",
+		"cta-url": "#block-webform-client-block-2844"
+	},
+
+	"package": {
+		"head": {
+			"title": "Choose your vacation adventure",
+			"desc-1": "Don’t let this summer slip away – make it count",
+			"desc-2": "Take the time to pursue your dreams and see the world with a Kaplan English course"
+		},
+		"body": {
+			"package-1": {
+				"course": "General English",
+				"location": "London Covent Garden",
+				"list-1": "4 Weeks (Flexible from 2 weeks)",
+				"list-2": "Student Residence or Homestay included",
+				"list-3": "Various social activities available",
+				"from": "Price from",
+				"price": "GBP £0,000",
+				"was": "Was GBP £0,000",
+				"save": "You save GBP £000",
+				"cta-label": "Contact an Advisor",
+				"cta-label-small": "For more information"
+			},
+			"package-2": {
+				"course": "Intensive English",
+				"location": "New York Empire State",
+				"list-1": "4 Weeks (Flexible from 2 weeks)",
+				"list-2": "Student Residence or Homestay included",
+				"list-3": "Various social activities available",
+				"from": "Price from",
+				"price": "GBP £0,000",
+				"was": "Was GBP £0,000",
+				"save": "You save GBP £000",
+				"cta-label": "Contact an Advisor",
+				"cta-label-small": "For more information"
+			},
+			"package-3": {
+				"course": "Vacation English",
+				"location": "Sydeny City",
+				"list-1": "4 Weeks (Flexible from 2 weeks)",
+				"list-2": "Student Residence or Homestay included",
+				"list-3": "Various social activities available",
+				"from": "Price from",
+				"price": "GBP £0,000",
+				"was": "Was GBP £0,000",
+				"save": "You save GBP £000",
+				"cta-label": "Contact an Advisor",
+				"cta-label-small": "For more information"
+			}
+		}
+	},
+
+	"process": {
+		"head": {
+			"title": "Create your own package",
+			"desc": "How do you want to spend your time? Choose your perfect destination, course and accommodation"
+		},
+		"body": {
+			"destination": {
+				"title": "Your Destination",
+				"strapline": "What’s your ideal study location?",
+				"desc": "The heart of the city – or a sun-drenched beach? London’s Covent Garden – or the top of the Empire State Building? Choose the perfect place from our amazing range of destinations"
+			},
+			"course": {
+				"title": "Your English Course",
+				"strapline": "How do you really want to study?",
+				"desc": "Whether you want to boost your skills dramatically in a short space of time, pass a specific exam, or simply pick up the basics whilst having some fun, Kaplan can cater to your individual needs."
+			},
+			"accommodation": {
+				"title": "Your Accommodation",
+				"strapline": "What feels like home for you?",
+				"desc": "Feeling at home is crucial to your learning experience. Whether you prefer to live with other students or with a native family, all of our student homes are safe, social, well-maintained and located close to both schools and city centres."
+			},
+			"cta-label": "Send your enquiry",
+			"cta-label-small": "To create your own package"
+		}
+	},
+
+	"other-product": {
+		"head": {
+			"title": "More about our Courses and Destinations",
+			"desc": "Do something amazing this summer. Explore, learn and make new friends at one of our superb English schools"
+		},
+		"body": {
+			"k-course": {
+				"title": "Our English Courses",
+				"desc": "Whatever your ambitions, we have an immersive English program to suit you",
+				"more": "Find out more",
+				"less": "View less",
+
+				"panel-title": "Kapan English Courses",
+	
+				"course1-title": "General English",
+				"course1-link": "https://www.kaplaninternational.com/flexible-english-courses/general-english",
+				"course1-why": "Balance English classes with leisure activities",
+				"course1-length": "Study from 2–52 weeks (depending on location)",
+				"course1-structure": "20 English Lessons + 7 Sessions of  K+ curriculum",
+	
+				"course2-title": "Intensive English",
+				"course2-link": "https://www.kaplaninternational.com/flexible-english-courses/intensive-english",
+				"course2-why": "Improve your English to a high level of fluency",
+				"course2-length": "Study from 2–52 weeks (depending on location)",
+				"course2-structure": "20 English Lessons + 8 specific Skills Lessons + 7 Sessions of  K+ curriculum",
+	
+				"course3-title": "Vacation English",
+				"course3-link": "https://www.kaplaninternational.com/flexible-english-courses/vacation-english",
+				"course3-why": "Combine English lessons with your travels and activities",
+				"course3-length": "Study from 2–52 weeks (depending on location)",
+				"course3-structure": "20 English Lessons + K +tools Online Learning",
+
+				"link-label": "Learn more →"
+			},
+			"k-school": {
+				"title": "Our English Schools",
+				"desc": "Spanning six countries across the English-speaking world",
+				"more": "Find out more",
+				"less": "View less",
+
+				"panel-title": "Kapan English Schools",
+
+				"country1-title": "United States",
+				"country1-link": "https://www.kaplaninternational.com/united-states",
+				"country1-desc": "13 fantastic cities in the US, including New York, San Francisco and Miami",
+
+				"country2-title": "United Kingdom",
+				"country2-link": "https://www.kaplaninternational.com/united-kingdom",
+				"country2-desc": "Choose from over 11 accredited schools across England and Scotland",
+
+				"country3-title": "Australia",
+				"country3-link": "https://www.kaplaninternational.com/australia",
+				"country3-desc": "6 accredited schools across the country, including Sydney and Melbourne",
+
+
+				"link-label": "Learn more →"
+			}
+		}
+	},
+
+	"difference": {
+		"head": {
+			"title": "The Kaplan Difference"
+		},
+		"body": {
+			"difference-1": "80 years of excellence in education",
+			"difference-2": "The largest network of schools in the English-speaking world",
+			"difference-3": "50,000 students from 150 countries each year",
+			"difference-4": "Recommended by 97% of students"
+		}
+	}
+}

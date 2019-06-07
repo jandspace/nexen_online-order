@@ -1,0 +1,148 @@
+html, body {
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	color: $color-grey;
+	font-size: $font-size-md;
+    font-weight: $font-weight-base;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border-style: none;
+}
+
+a {
+	color: $text-link;
+}
+
+a:hover {
+	color: $text-hover;
+}
+
+
+.fullwidth { 
+	width: 100vw;
+	position: relative;
+	left: -moz-calc(-50vw + 50%);
+	left: -webkit-calc(-50vw + 50%);
+	left: -o-calc(-50vw + 50%);
+	left: calc(-50vw + 50%);
+
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	@mixin xs-max {
+		width: auto;
+		margin-left: -15px;
+		margin-right: -15px;
+		left: inherit;
+	}
+}
+
+.flex-container {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+
+	&.vertical-stretch {
+		align-items: stretch;
+	}
+	&.vertical-start {
+		align-items: flex-start;
+	}
+	&.vertical-center {
+		align-items: center;
+	}
+	&.vertical-end {
+		align-items: flex-end;
+	}
+
+	&.horizontal-start {
+		justify-content: flex-start;
+	}
+	&.horizontal-center {
+		justify-content: center;
+	}
+	&.horizontal-end {
+		justify-content: flex-end;
+	}
+
+	&.grid {
+		margin-left: -15px;
+		margin-right: -15px;
+		.flex-item {
+			padding: 15px;
+			min-height: 1px;
+		}
+	}
+	.flex-item {
+		/* display: -ms-flexbox;
+		display: -webkit-box;
+		display: flex; */
+									
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		-ms-flex-item-align: stretch;
+		-ms-grid-row-align: stretch;
+		align-self: stretch;
+
+		.item-inner {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.video-wrapper {
+	.video {
+		position: relative;
+		padding-bottom: 52%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

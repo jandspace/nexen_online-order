@@ -1,0 +1,95 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* When you make a new repo
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. Install NPM locally
+	$ sudo npm install
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* NPM Install Error
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. Clear NPM cache
+	$ sudo npm cache clean --force
+
+2. Delete node_modules and package-lock.json, and then run npm install.
+	$ sudo rm -rf node_modules && rm ./package-lock.json && npm install
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* GULP Watch Error
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. Install Gulp locally
+	$ sudo npm install gulp-cli -g 
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* GULP Build Error
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. File ownership change
+	$ sudo chown -R joungmin.shin /usr/local/lib/node_modules
+	$ sudo chown -R joungmin.shin /usr/local/bin
+	$ sudo chown -R joungmin.shin /usr/local/share
+
+2. Gulp re-install
+	$ sudo npm install gulp-cli --global
+	
+3. Again file ownership change
+	$ sudo chown -R joungmin.shin ~/.npm
+	$ sudo chown -R joungmin.shin /Users/joungmin.shin/ *** PROJECT_FOLDER *** /node_modules
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* GULP Localisation
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. Go to gulp>locales folder and dulpicate market folder from 'en'
+
+2. Go to gulp>tasks folder and open 'localize.js'
+
+3. Change locales: ['en'] to locales: ['XX']
+
+4. Open terminal and run task 'gulp localizeDrupal'
+
+5. Preview the page by running 'gulp previewDist' then add Market code 'http://localhost:3000/transilation/XX/'
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* Arabic RTL css generation
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+1. Run gulp arabic-css
+
+2. Go to /app/temp/styles-ar 
+
+3. Copy CSS for Arabic
+
+
+
+
+
+* Not to upload heavy folder/file (such as node_modules) * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+1. Open a new document
+2. Add code
+	
+	# Created by .ignore support plugin
+	.gitignore
+	node_modules
+
+3. Save file as (.gitignore) in the project root
