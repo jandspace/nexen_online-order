@@ -1,0 +1,210 @@
+.modal.prod-modal {
+	.modal-dialog {
+		width: auto;
+		margin: 15px;
+
+		@mixin sm-min {
+			margin: 30px auto;
+			width: calc(100% - 80px);
+			max-width: 920px;
+		}
+
+		.modal-content {
+			.modal-header {
+				padding: 0;
+				border-bottom: none;
+				box-shadow: 1px 1px 8px rgba(0,0,0,.2);
+				z-index: 1;
+
+				h5.modal-title {
+					padding: 1rem 15px;
+					font-weight: $font-weight-medium;
+				}
+
+
+				button.close {
+					display: block;
+					/* position: fixed; */
+					top: 0;
+					right: 0;
+					margin: 0;
+					opacity: 1;
+					width: 54px;
+					height: 54px;
+					color: $color-white;
+					background: $color-grey-k;
+					line-height: 48px;
+					z-index: 9;
+					padding: 0;
+					text-shadow: none;
+
+					span {
+						font-size: 32px;
+						display: block;
+					}
+
+					@mixin sm-min {
+						position: static;
+					}
+					@mixin md-min {
+						&:hover {
+							background-color: $color-primary-light;
+						}
+					}
+				}
+			}
+			.modal-body {
+				padding: 1rem 2rem 2rem 2rem;
+				.flex-container {
+					.flex-item {
+						&.image-container {
+							padding: 0;
+							align-self: flex-start;
+
+							-ms-flex: 0 0 100%;
+							-webkit-box-flex: 0;
+							flex: 0 0 100%;
+							max-width: 100%;
+
+							@mixin sm-min {
+								-ms-flex: 0 0 46%;
+								-webkit-box-flex: 0;
+								flex: 0 0 46%;
+								max-width: 46%;
+							}							
+
+							.item-inner {
+								width: 100%;
+								height: auto;
+
+								.carousel-inner {
+									border: 1px solid #DDDDDD;
+								}
+								.item-image-wrapper {
+									position: relative;
+									width: 100%;
+									display: block;
+
+									@mixin md-min {
+										width: 100%;
+									}
+
+									&:after {
+										padding-top: 100%;
+										display: block;
+										content: '';
+									}
+									.item-image-center {
+										display: block;
+										position: absolute;
+										top: 0;
+										bottom: 0;
+										right: 0;
+										left: 0;
+										overflow: hidden;
+										line-height: 1;
+										background-color: #FFF;
+
+										img {
+											max-height: 94%;
+											max-width: 94%;
+											width: auto;
+											height: auto;
+											position: absolute;  
+											top: 0;  
+											bottom: 0;  
+											left: 0;  
+											right: 0;  
+											margin: auto;
+										}
+									}
+								}							
+							}
+						}
+						&.prod-info-container {
+							-ms-flex: 0 0 100%;
+							-webkit-box-flex: 0;
+							flex: 0 0 100%;
+							max-width: 100%;
+
+							@mixin sm-min {
+								padding: 0 0 0 30px;
+
+								-ms-flex: 0 0 54%;
+								-webkit-box-flex: 0;
+								flex: 0 0 54%;
+								max-width: 54%;
+							}
+
+							h3.prod-name {
+								.cd-prod-code {
+									font-size: 18px;
+									font-weight: bold;
+									color: $color-primary;
+								}
+							}
+							span.cd-label {
+								[class*="cd-label-"] {
+									padding: 0 15px 0 0;
+
+									&:before {
+										font-size: 18px;
+										padding-right: 6px;
+										color: $color-primary;
+										vertical-align: -3px;
+									}
+								}
+							}
+							ul.prod-spec {
+								padding-left: 18px;
+								padding-bottom: 30px;
+								margin: 10px 0 0 0;
+
+								li.spec-item {
+									@mixin md-min {
+										padding: 1px 0;
+									}
+									.data-label {
+										min-width: 72px;
+										margin-right: 6px;
+										display: inline-block;
+										font-size: 11px;
+										text-transform: uppercase;
+									}
+									.d-field {
+										font-weight: $font-weight-medium;
+
+									}
+								}
+							}
+						}
+						.carousel-thumbnails {
+							&.carousel-thumbnails {
+								display: block;
+								position: static;
+								padding: 10px 0;
+								margin: 0;
+								text-align: center;
+
+								li {
+									display: inline-block;
+									list-style: none;
+									width: 50px;
+									height: 50px;
+									background-color: $color-white;
+									border: 1px solid $color-grey-f;
+									margin: 5px;
+
+									@mixin sm-min {
+										width: 64px;
+										height: 64px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

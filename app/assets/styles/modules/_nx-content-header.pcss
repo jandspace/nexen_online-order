@@ -1,0 +1,433 @@
+.nx-content-header {
+
+	background: rgb(128,20,148);
+	background: -moz-linear-gradient(left,  rgba(128,20,148,1) 0%, rgba(40,0,80,1) 100%);
+	background: -webkit-linear-gradient(left,  rgba(128,20,148,1) 0%,rgba(40,0,80,1) 100%);
+	background: linear-gradient(to right,  rgba(128,20,148,1) 0%,rgba(40,0,80,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801494', endColorstr='#280050',GradientType=1 );
+
+
+	/* background-color: #801494;
+	background: linear-gradient(270deg, #801494, #801494, #280050, #801494, #801494);
+	background-size: 1000% 1000%;
+
+	-webkit-animation: color-grad-pri 15s ease infinite;
+	-moz-animation: color-grad-pri 15s ease infinite;
+	animation: color-grad-pri 15s ease infinite; */
+
+	.title-bar {
+		padding: 5px 0 15px 0;
+		margin-bottom: 15px;
+		border-bottom: 2px solid rgba(255,255,255,0.4);
+
+		h1, h2 {
+			vertical-align: top;
+			color: $color-white;
+			margin: 0;
+			display: inline-block;
+			@mixin xs-max {
+				display: block;
+			}
+		}
+		h2.basic-title {			
+			font-size: 14px;
+			opacity: 0.75;
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+			&:after {
+				content: "";
+				display: inline-block;
+				padding: 0 6px;
+			}
+			@mixin sm-min {
+				font-size: 16px;
+				&:after {
+					content: ">";
+				}
+			}
+			@mixin md-min {
+				font-size: 20px;
+			}
+		}
+		h1.page-title {
+			font-size: 28px;
+			text-transform: uppercase;
+			font-weight: $font-weight-black;
+			@mixin sm-min {
+				font-size: 32px;
+			}
+			@mixin md-min {
+				font-size: 42px;
+			}
+		}
+	}
+
+	.hd-function {
+
+		.flex-item {
+			-ms-flex-order: 0;
+			order: 0;
+
+			-ms-flex: 0 0 100%;
+			-webkit-box-flex: 0;
+			flex: 0 0 100%;
+			max-width: 100%;
+
+			@mixin md-min {
+				-ms-flex: 0 0 50%;
+				-webkit-box-flex: 0;
+				flex: 0 0 50%;
+				max-width: 50%;
+
+				padding-right: 15px;
+			}
+		}
+	}
+
+	form.order-hd-filter {
+
+		.hd-function {
+			margin-bottom: 15px;
+		} 
+
+		.field-wrapper {
+
+			label.label {
+				color: $color-white;
+				padding-right: 6px;
+			}
+
+		 	div.input-wrapper {
+
+		 		@mixin lg-min {
+		 			flex: 4;
+		 		}
+
+
+		 		&.customer,
+		 		&.pay-to-party {
+		 			select {
+		 				width: 100%;
+		 				@mixin sm-min {
+		 					width: 80%;
+		 				}
+		 				@mixin md-min {
+		 					width: 95%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 80%;
+		 					min-width: 380px;
+		 				}
+		 			}
+		 		}
+		 		&.quick-order,
+		 		&.shopping-list {
+		 			input, select {
+		 				width: auto;
+		 				display: block;
+		 				float: left;
+		 			}
+
+		 			input[type=text] {
+						width: 35%;
+						margin-right: 2%;
+						@mixin sm-min {
+		 					width: 28%;
+		 				}
+		 				@mixin md-min {
+		 					width: 42%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 174px;
+		 					margin-right: 8px;
+		 				}
+					}
+					select.qty-no {
+						width: 15%;
+						margin-right: 2%;
+						@mixin sm-min {
+		 					width: 13%;
+		 				}
+		 				@mixin md-min {
+		 					width: 13%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 54px;
+		 					margin-right: 8px;
+		 				}
+					}
+					button.btn-cart {
+						text-align: left;
+						width: 46%;
+						@mixin sm-min {
+		 					width: 35%;
+		 				}
+		 				@mixin md-min {
+		 					width: 36%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 150px;
+		 				}
+					}
+					button.btn-shopping-list {
+						text-align: left;
+						width: 100%;
+						@mixin sm-min {
+		 					width: 80%;
+		 				}
+		 				@mixin md-min {
+		 					width: 95%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 394px;
+		 				}
+					}			
+		 		}
+
+		 		&.prod-search {
+		 			input, select {
+		 				width: auto;
+		 				display: block;
+		 				float: left;
+		 			}
+		 			input[type=text] {
+		 				width: 64%;
+		 				border-right: 1px solid $color-grey-g;
+		 				@mixin sm-min {
+		 					width: 40%;
+		 				}
+		 				@mixin md-min {
+		 					width: 44%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 44%;
+		 				}
+		 			}
+		 			select {
+		 				width: 36%;
+		 				@mixin sm-min {
+		 					width: 20%;
+		 					
+		 				}
+		 				@mixin md-min {
+		 					width: 24%;
+		 				}
+		 				@mixin lg-min {
+		 					width: 20%;
+		 				}
+		 			}
+		 			button.btn-search {
+		 				margin-top: 10px;
+		 				width: 100%;
+		 				@mixin sm-min {
+		 					margin-top: 0;
+		 					width: 18%;
+		 					margin-left: 2%;
+		 				}
+		 				@mixin md-min {
+		 					width: auto;
+		 					span.btn-text {
+		 						font-size: 12px;
+		 					}
+		 				}
+		 				@mixin lg-min {
+		 					/* width: 28%; */
+		 					span.btn-text {
+		 						font-size: 13px;
+		 					}
+		 				}
+		 			}
+		 		}
+
+		 		&.sort-by {
+		 			select {
+		 				max-width: 150px;
+		 			}
+		 		}
+		 	}
+		}
+
+		.cart-function {
+
+			.flex-item {
+				&:nth-child(2) {
+					align-self: flex-end;
+				}				
+			}
+
+			.order-no-container {
+				justify-content: flex-start;
+				margin-bottom: 8px;
+
+				.flex-item {
+					-ms-flex: 0 0 100%;
+					-webkit-box-flex: 0;
+					flex: 0 0 100%;
+					max-width: 100%;
+					padding-right: 0;
+
+					@mixin sm-min {
+						-ms-flex: 0 0 50%;
+						-webkit-box-flex: 0;
+						flex: 0 0 50%;
+						max-width: 50%;
+					}
+					@mixin lg-min {
+						-ms-flex: 0 0 46%;
+						-webkit-box-flex: 0;
+						flex: 0 0 46%;
+						max-width: 46%;
+					}
+
+					.input-wrapper {
+						input {
+							width: 120px;
+							height: 24px;
+							background-color: transparent;
+							font-weight: $font-weight-bold;
+							color: $color-white;
+							font-size: $font-size-md;
+							@mixin sm-min {
+								font-size: $font-size-lg;
+							}
+							@mixin md-min {
+								font-size: $font-size-xl;
+							}
+						}
+					}
+				}
+			}
+			.purchase-order {
+				justify-content: flex-start;
+
+				.flex-item {
+					-ms-flex: 0 0 100%;
+					-webkit-box-flex: 0;
+					flex: 0 0 100%;
+					max-width: 100%;
+					padding-right: 0;
+
+					display: flex;
+
+					&.empty {
+						@mixin xs-max {
+							display: none;
+						}
+						visibility: hidden;
+						padding: 0;
+					}
+				}
+
+				label {
+					flex: 0 0 40%;
+					max-width: 40%;
+					padding-right: .25rem;
+					line-height: 1.1;
+				}
+				.input-wrapper {
+					flex: 0 0 60%;
+					max-width: 60%;
+				}
+
+				@mixin sm-min {
+					.flex-item {
+						flex: 0 0 33.33333333%;
+						max-width: 33.33333333%;
+
+						label {
+							flex: 0 0 33.33333333%;
+							max-width: 33.33333333%;
+						}
+						.input-wrapper {
+							flex: 0 0 66.66666666%;
+							max-width: 66.66666666%;
+							padding-right: 10px;
+						}
+					}
+				}
+
+				@mixin md-min {
+					.flex-item {
+						label {
+							flex: 0 0 42%;
+							max-width: 42%;
+						}
+						.input-wrapper {
+							flex: 0 0 58%;
+							max-width: 58%;
+						}
+					}
+				}
+				@mixin lg-min {
+					.flex-item {
+						label {
+							flex: 0 0 38%;
+							max-width: 38%;
+						}
+						.input-wrapper {
+							flex: 0 0 62%;
+							max-width: 62%;
+							padding-right: 10px;
+						}
+					}
+				}
+				@mixin xl-min {
+					.flex-item {
+						label {
+							flex: 0 0 30%;
+							max-width: 30%;
+						}
+						.input-wrapper {
+							flex: 0 0 70%;
+							max-width: 70%;
+							padding-right: 30px;
+						}
+					}
+				}
+
+				.date {
+					position: relative;
+					min-width: 128px;
+
+					input {
+						background-color: $color-white;
+						border: none;
+					}
+
+					.input-group-addon {
+						position: absolute;
+						width: 36px;
+						height: 100%;
+						top: 0;
+						right: 0;
+						text-align: center;
+						background-color: $color-grey-e;
+						z-index: 3;
+						
+						.icon-date {
+							font-size: 16px;
+							line-height: 36px;
+							color: $color-black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes color-grad-pri {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-moz-keyframes color-grad-pri {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@keyframes color-grad-pri { 
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}

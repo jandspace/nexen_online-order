@@ -1,0 +1,18 @@
+.btn {
+	color: $color-white;
+	background-color: $color-primary;
+	border-radius: 8px;
+	line-height: 1.1;
+	padding: 0.375rem 0.75rem;
+	border: 1px solid transparent;
+	font-weight: $font-weight-medium;
+	font-size: 12px;
+	@mixin md-min {
+		font-size: 13px;
+		&:hover {
+			color: $color-white;
+			background-color: $color-primary-light;
+			border: 1px solid transparent;
+		}
+	}
+}

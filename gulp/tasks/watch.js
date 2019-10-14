@@ -7,7 +7,7 @@ gulp.task('watch', function() {
 
   browserSync.init({
     notify: false,
-      tunnel: true,
+      tunnel: false,
     server: {
       baseDir: "app"
     }

@@ -14,7 +14,7 @@ browserSync = require('browser-sync').create();
 gulp.task('previewElandww', function() {
     browserSync.init({
         notify: false,
-        tunnel: true,
+        tunnel: false,
 
         server: {
             baseDir: "elandww"

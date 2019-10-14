@@ -1,0 +1,121 @@
+.page-labelsearch {
+	.nx-primary-sidebar {
+		.sidebar-inner {
+			.filter {
+				/* h2.sidebar-title {
+					@mixin sm-min {
+						margin: 20px 0 10px 0;
+					}
+					@mixin lg-min {
+						margin: 20px 0 15px 0;
+					}
+				} */
+			}
+		}
+	}
+}
+
+.labelsearch-page {
+	.result-container {
+		position: relative;
+		border-top: 1px solid $color-grey-f;
+
+		.view-mode {
+			&.listview {
+				table.search-table {
+					background-color: transparent !important;
+
+					tbody {
+						tr {
+							@mixin sm-min {
+								&:nth-child(even) {
+									background-color: #E6E6E6;
+								}
+							}
+
+							@mixin md-min {
+								transition: background-color 0.8s ease;
+								&:hover {
+									background-color: rgba(255,146,67,0.15);
+								}
+							}
+						}
+					}
+
+					th,
+					td {
+						line-height: 1.1;
+
+						&[class*='cell-'] {
+							width: calc(68% / 6);
+						}						
+						&.cell-1 {
+							width: 12%;
+						}
+						&.cell-8 {
+							width: 20%;
+							span {
+								&.cd-label {
+									cursor: pointer;
+									display: inline-block;
+									[class*="cd-label-"] {
+										margin: 4px 0;
+									}
+									button {
+										width: auto;
+										vertical-align: 1px;
+									}
+
+									@mixin lg-min {
+										border-radius: 8px;
+										padding-left: 0.75rem;
+										transition: all 0.3s ease;
+										&:hover {
+											background-color: $color-primary-light;
+											*,
+											span:before {
+												color: $color-white;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					td {
+						button {
+							width: 100%;
+							max-width: 78px;
+						}
+						.cd-stock,
+						.cd-at-dock {
+							font-weight: $font-weight-bold;
+							color: $color-primary;
+						}
+					}
+				}
+				@mixin xs-max {
+					table.search-table {
+						tbody {
+							tr{
+								td {
+									&:first-child {
+										button {
+											margin: 0 0 0 4px;
+										}
+									}
+									&.cell-8 {
+										width: 100% !important;
+										&:before {
+											width: 25%;
+										}
+									}
+								}
+							}
+						}
+					}					
+				}
+			}
+		}
+	}
+}

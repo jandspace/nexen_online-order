@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]>
+<html class="iem7">
+<![endif]-->
+<!--[if (lte IE 6)&(!IEMobile)]>
+<html class="ie6 ie6-7 ie6-8">
+<![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>
+<html class="ie7 ie6-7 ie6-8">
+<![endif]-->
+<!--[if (IE 8)&(!IEMobile)]>
+<html class="ie8 ie6-8">
+<![endif]-->
+<!--[if (IE 9)&(!IEMobile)]>
+<html class="ie9 ie6-9">
+<![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)]><!-->
+<html lang="en" >
+	<!--<![endif]-->
+	<head profile="http://www.w3.org/1999/xhtml/vocab">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="MobileOptimized" content="width" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- IE -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<!-- other browsers -->
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<title>Nexen Online Order System | Nexen Tyres</title>
+
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/assets/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#801494">
+		<meta name="msapplication-TileColor" content="#9f00a7">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="/assets/base/bootstrap.min.css">
+
+		<!-- Bootstrap DatePicker -->
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
+		<link href="/assets/base/datepicker.css" rel="stylesheet" type="text/css" />
+
+
+
+		<!-- Style: in Gulp -->
+		<link rel="stylesheet" href="temp/styles/styles.css"><!-- App -->
+	</head>
+
+
+
+	<body dir="ltr" class="html page-login">
+
+		<div class="nx-wrapper flex-container">
+			<div class="flex-item login-container">
+				<div class="flex-container">
+					<div class="flex-item nx-brand-area">
+						<div class="login-header-inner">
+							<a class="login-header-nx-logo" href="/"><img src="/assets/images/nexen-logo-bw.png" class="img-responsive nx-logo" alt="Nexen - Online Order System"></a>
+							<h4 class="login-header-nx-order-sys">
+								<span class="welcome">Welcome to</span>
+								Online Order System
+							</h4>
+						</div>
+					</div>
+					<div class="flex-item login-form-area">
+						<div class="login-form-inner">
+							<form id="Login-form" class="login-form">
+								<div class="field-wrapper username">
+									<label id="Login-Username-L" class="label" for="Login-Username">USER ID</label>
+									<div class="input-wrapper">
+										<input type="text" id="Login-Username" name="" value="" maxlength="40" title="Username" placeholder="12345678" class="" />
+									</div>
+								</div>
+								<div class="field-wrapper password">
+									<label id="Login-Password-L" class="label" for="Login-Password">PASSWORD</label>
+									<div class="input-wrapper">
+										<input type="password" id="Login-Password" name="" value="" maxlength="40" title="Password" placeholder="password" class="" />
+									</div>
+								</div>
+								<div class="oneChoice">
+									<input type="checkbox" value="Remember-Me" id="Remember-Me" class="" name="">
+									<label class="label postField" id="" for="Remember-Me">Remember me</label>
+								</div>
+								<div class="oneChoice">
+									<select id="Lang-Select" class="lang-selector">
+										<option value="English" selected>English</option>
+										<option value="German">German</option>
+										<option value="French">French</option>
+										<option value="Italian">Italian</option>
+										<option value="Czech">Czech</option>
+									</select>
+								</div>
+								<div class="login-btn-box button">
+									<button type="submit" class="btn btn-login">
+										<span class="btn-text">LOGIN</span>
+									</button>
+								</div>
+								<div class="forgot-pw-box">
+
+									<!-- Login Error: true? or false -->
+									<div class="login-error" login-error="true">
+										Invalid ID or Password. Please try again.
+									</div>
+									<a href="#" class="forgot-pw" data-toggle="modal" data-target="#Pw-Reset-Modal">Forgot password?</a>
+								</div>
+								<div class="company-info">
+									<p class="business-name">
+										<strong>NEXEN TYRE EUROPE S.R.O</strong><br>
+										Lise-Meitner-Straße 1, 65779 Kelkheim (Taunus), Germany<br>
+										T. +49 6196 954 8655 / F. +49 6196 954 8677
+									</p>
+									<!-- <p class="extra-link">
+										<a class="" href="#">Impressum</a>
+										<span class="divider"> / </span>
+										<a class="" href="#">AGB</a>
+									</p> -->
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright-container">
+				Copyright © NEXEN TYRE. All rights reserved
+			</div>
+		</div>
+		
+
+
+<!-- Password Rest - Modal -->
+<div class="modal fade pw-reset-modal" id="Pw-Reset-Modal" tabindex="-1" role="dialog" aria-labelledby="Pw-Reset-Modal--Title" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="Pw-Reset-Modal--Title">Reset Password</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="pw-reset-container">
+					<form id="Pw-Reset-form" class="pw-reset-form">
+						<div class="field-wrapper flex-container username">
+							<label id="Pw-Reset-Username-L" class="label" for="Pw-Reset-Username">User ID</label>
+							<div class="input-wrapper">
+								<input type="text" id="Pw-Reset-Username" name="" value="" maxlength="40" title="Username" placeholder="12345678" class="" />
+							</div>
+						</div>
+						<div class="field-wrapper flex-container firstname">
+							<label id="Pw-Reset-Firstname-L" class="label" for="Pw-Reset-Firstname">First name</label>
+							<div class="input-wrapper">
+								<input type="text" id="Pw-Reset-Firstname" name="" value="" maxlength="40" title="First name" placeholder="First name" class="" />
+							</div>
+						</div>
+						<div class="field-wrapper flex-container lastname">
+							<label id="Pw-Reset-Lastname-L" class="label" for="Pw-Reset-Lastname">Last name</label>
+							<div class="input-wrapper">
+								<input type="text" id="Pw-Reset-Lastname" name="" value="" maxlength="40" title="Last name" placeholder="Last name" class="" />
+							</div>
+						</div>
+						<div class="field-wrapper flex-container email">
+							<label id="Pw-Reset-Email-L" class="label" for="Pw-Reset-Email">Email address</label>
+							<div class="input-wrapper">
+								<input type="email" id="Pw-Reset-Email" name="" value="" maxlength="40" title="Email address" placeholder="username@example.com" class="" />
+							</div>
+						</div>
+						<div class="field-wrapper btn-container">
+							<button type="button" class="btn cd-pw-reset">Reset Password</button>
+							<button type="button" class="btn cd-reset-cancel" data-dismiss="modal" aria-label="Close">Cancel</button>
+						</div>
+					</form>
+					<div class="contact-us">
+						If you're having trouble logging into your account, please let us know.<br>
+						E. <a href="mailto:support@xxxxxxxxxx.com" title="Email us" class="email-us">support@xxxxxxxxxx.com</a>
+						/
+						T. <a href="tel:+49 6196 954 8655" title="Telephone number" class="call-us">+49 6196 954 8655</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="/assets/base/jquery-3.3.1.slim.min.js"></script>
+		<script src="/assets/base/popper.min.js"></script>
+		<script src="/assets/base/bootstrap.min.js"></script>
+
+		<script src="/assets/base/bootstrap-datepicker.min.js"></script>
+		<script src="/assets/base/cookieconsent.min.js" data-cfasync="false"></script>
+
+
+		<!-- <script type='text/javascript' src="http://localhost:8888/assetlibs/test/nx-custom.js"></script> -->
+		<script src="/assets/scripts/nx-custom.js"></script>
+
+	</body>
+</html>

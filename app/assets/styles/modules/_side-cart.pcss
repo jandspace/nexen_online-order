@@ -1,0 +1,415 @@
+.nx-secondary-sidebar {
+	.sidebar-inner {
+
+		@mixin xs-max {
+			&.sidebar-cart {
+				padding-bottom: 0;
+			}
+		}
+
+		.minicart {
+			@mixin md-min {
+				padding-bottom: 50px;
+			}
+			@mixin lg-min {
+				padding-bottom: 100px;
+			}
+			
+			h2.sidebar-title {
+				margin: 20px 0 10px 0;
+				font-size: $font-size-md;
+				font-weight: $font-weight-bold;
+				text-transform: uppercase;
+				color: $color-primary;
+
+				@mixin sm-min {
+
+				}
+				@mixin md-min {
+					margin: 20 0 15px 0;
+					font-size: $font-size-lg;
+				}
+				@mixin lg-min {
+					margin: 20px 0 15px 0;
+				}
+			}
+
+			.cart-box {
+				margin-bottom: 4px;
+				* {
+					font-size: 12px;
+					@mixin md-min {
+						font-size: 13px;
+					}
+
+					input {
+						color: $color-grey-k;
+					}
+				}
+
+				&.order-no {
+					padding: 4%;
+					background-color: $color-primary;
+					.field-wrapper {
+						padding: 0;
+						label.label {
+							flex: 2;
+							color: $color-white;
+						}
+						div.input-wrapper {
+							flex: 3;
+							input {
+								width: 100%;
+							}
+						}
+					}					
+				}
+
+				&.items {
+					padding: 4%;
+					background: rgb(128,20,148);
+					background: -moz-linear-gradient(top,  rgba(128,20,148,1) 0%, rgba(40,0,80,1) 100%);
+					background: -webkit-linear-gradient(top,  rgba(128,20,148,1) 0%,rgba(40,0,80,1) 100%);
+					background: linear-gradient(to bottom,  rgba(128,20,148,1) 0%,rgba(40,0,80,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801494', endColorstr='#280050',GradientType=0 );
+
+					table.cart-table {
+						width: 100%;
+						
+						th {
+							padding-bottom: 4px;
+							border-bottom: 2px solid $color-secondary;
+							* {
+								font-size: 12px;
+								font-size: 11px;
+								font-weight: $font-weight-bold;
+								color: $color-secondary;
+							}
+						}
+						td {
+							padding: 5px 4px 5px 0;
+							border-bottom: 1px solid rgba(255,255,255,0.2);
+							/* vertical-align: top; */
+							word-break: break-all;
+
+							span {
+								display: inline-block;
+								color: $color-white;
+							}
+							.qty {
+								select {
+									height: 28px;
+									width: 44px;
+									border: 1px solid transparent;
+								}
+								/* input[type=number] {
+									width: 40px;
+									border: 1px solid transparent;
+									padding: 5px 1px;
+									text-align: center;
+								}
+								input[type=number]::-webkit-inner-spin-button,
+								input[type=number]::-webkit-outer-spin-button {
+									opacity: 1;
+								} */
+							}
+							.delete-item {
+								width: auto;
+								height: auto;
+								padding: 0;
+								margin: 0;
+								background-color: transparent;
+								.icon-delete {
+									color: $color-secondary;
+									margin-left: 2px;
+									font-weight: 700;
+									@mixin md-min {
+										&:hover {
+											color: white;
+										}
+									}
+								}
+							}
+						}
+						
+						&.cart-item-table {
+							th, td {
+								&:nth-child(3) {
+									text-align: right;
+								}
+							}
+						}
+						&.cart-fee-table {
+							border-top: 1px solid rgba(255,255,255,0.6);
+							td {
+								&:nth-child(2) {
+									text-align: right;
+								}
+							}
+						}
+						&.cart-total-table {
+							border-top: 2px solid $color-white;
+							td {
+								display: block !important;
+								border: none;
+								&:first-child {
+									padding-bottom: 4px;
+								}
+								&:nth-child(2) {
+									text-align: right;
+								}
+								.total {
+									font-weight: $font-weight-bold;
+								}
+								.total-price {
+									font-weight: $font-weight-bold;
+									font-size: 18px;
+									sub {
+										vertical-align: 4px;
+										font-weight: $font-weight-medium;
+									}
+								}
+
+								.credit-info {
+									opacity: 0.75;
+									padding-top: 4px;
+									text-align: right;
+									div {
+										margin: 1px 0;
+										color: $color-white;
+										font-size: 11px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&.extra {
+					padding: 4%;
+					background-color: $color-primary-dark;
+					.field-wrapper {
+						padding: 3px 0;
+						label.label {
+							flex: 2;
+							color: $color-white;
+						}
+						div.input-wrapper {
+							flex: 3;
+							input {
+								width: 100%;
+								background-color: $color-white;
+								border: none;
+							}
+							.date {
+								position: relative;
+
+								.input-group-addon {
+									position: absolute;
+									width: 36px;
+									height: 100%;
+									top: 0;
+									right: 0;
+									text-align: center;
+									background-color: $color-grey-e;
+									z-index: 3;
+
+									.icon-date {
+										font-size: 16px;
+										line-height: 36px;
+										color: $color-black;
+									}
+								}
+							}
+						}
+					}					
+				}
+
+				&.button {
+					.agree-t-n-c {
+						margin: 10px 0;
+						font-size: 12px;
+						a {
+							font-size: 12px;
+							text-decoration: underline;
+						}
+					}
+					.btn-view-cart {
+						position: relative;
+						z-index: 1;
+						border: none !important;
+						overflow: hidden;
+
+						width: 100%;
+						color: $color-white;
+						font-weight: $font-weight-bold;
+						padding: 15px 0;
+						border-radius: 8px;
+
+						background-color: #FF9243;
+						background: linear-gradient(270deg, #FF9243, #FF9243, #801494, #FF9243, #FF9243);
+						background-size: 800% 800%;
+
+						-webkit-animation: color-grad-btn 4s ease infinite;
+						-moz-animation: color-grad-btn 4s ease infinite;
+						animation: color-grad-btn 4s ease infinite;
+
+						@mixin md-min {
+							&:after {
+								content: '';
+								position: absolute;
+								z-index: -1;
+								top: 0;
+								left: 0;
+								width: 0;
+								height: 100%;
+								background-color: $color-primary;
+								transition: width .4s;
+							}
+							&:hover {
+								color: $color-white;
+								&:after {
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+
+
+			.minicart-inner {
+				@mixin md-min {
+					display: block;
+				}
+				/* display: none;
+				@mixin md-max {
+					display: none;
+					&.show {
+						display: block;
+					}
+				} */
+			}
+
+			@mixin md-max {
+				/* padding-bottom: 5%; */
+				/* border-bottom: 1px solid #CCCCCC; */
+
+				/* h2.sidebar-title {
+					margin: 5px 0;
+				} */
+				.cart-box {
+
+					&.items,
+					&.order-no,
+					&.extra {
+						padding: 12px;
+					}
+
+					table.cart-table {
+						line-height: 1.25;
+						thead,
+						tbody {
+							display: table-row-group !important;
+							tr {
+								display: table-row !important;
+								th,
+								td {
+									display: table-cell !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@mixin xs-max {
+				padding-bottom: 0;
+			}
+
+			button.btn-cart-summary {
+				display: none;
+
+				@mixin sm-max {
+					display: block;
+				}
+
+				position: relative;
+				width: 100%;
+				padding: 10px;
+				border-radius: 0;
+				margin-bottom: 4px;
+				background: $color-primary-dark;
+				
+				opacity: .5;
+				span {
+					opacity: .5;
+				}
+
+				.total-item,
+				.total-price {
+					display: block;
+					text-align: left;
+					color: $color-white;
+				}
+				.total-item {
+					span {
+						font-size: $font-size-xxs;
+					}					
+				}
+				.total-price {
+					margin-top: 5px;
+					font-size: $font-size-lg;
+					font-weight: $font-weight-bold;
+				}
+
+				&:after {
+					content: "×";
+					display: block;
+					position: absolute;
+					right: 4px;
+					bottom: 8px;
+					width: 24px;
+					height: 24px;
+					font-size: 24px;
+					line-height: 1;
+					font-weight: 400;					
+					color: $color-white;
+				}
+
+				&.collapsed {
+					background: $color-primary-dark;
+					opacity: 1;
+					span {
+						opacity: 1;
+					}
+					
+					&:after {
+						content: "+";
+					}
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes color-grad-btn {
+	0%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-moz-keyframes color-grad-btn {
+	0%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@keyframes color-grad-btn { 
+	0%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+
+.datepicker-dropdown.datepicker-orient-left:before {
+	left: calc(50% - 4px);
+}
+.datepicker-dropdown.datepicker-orient-left:after {
+	left: calc(50% - 3px);
+}
+

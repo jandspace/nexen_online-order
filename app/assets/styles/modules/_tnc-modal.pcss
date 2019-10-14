@@ -1,0 +1,61 @@
+.modal.tnc-modal {
+	.modal-dialog {
+		width: auto;
+		margin: 15px;
+
+		@mixin sm-min {
+			margin: 30px auto;
+			width: calc(100% - 80px);
+			max-width: 920px;
+		}
+
+		.modal-content {
+			.modal-header {
+				padding: 0;
+				border-bottom: none;
+				box-shadow: 1px 1px 8px rgba(0,0,0,.2);
+				z-index: 1;
+
+				h5.modal-title {
+					padding: 1rem 15px;
+					font-weight: $font-weight-medium;
+				}
+
+
+				button.close {
+					display: block;
+					/* position: fixed; */
+					top: 0;
+					right: 0;
+					margin: 0;
+					opacity: 1;
+					width: 54px;
+					height: 54px;
+					color: $color-white;
+					background: $color-grey-k;
+					line-height: 48px;
+					z-index: 9;
+					padding: 0;
+					text-shadow: none;
+
+					span {
+						font-size: 32px;
+						display: block;
+					}
+
+					@mixin sm-min {
+						position: static;
+					}
+					@mixin md-min {
+						&:hover {
+							background-color: $color-primary-light;
+						}
+					}
+				}
+			}
+			.modal-body {
+				padding: 1rem 2rem 2rem 2rem;
+			}
+		}
+	}
+}

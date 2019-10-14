@@ -1,0 +1,152 @@
+.nx-footer-above {
+	background-color: $color-primary-dark;
+	.privacy-legal {
+		padding: 15px 30px;
+
+		@mixin sm-min {
+			padding: 0;
+		}
+
+		.footer-links,
+		.footer-support {
+			color: $color-grey-g;
+
+			padding: 5px 30px;
+			flex: 0 0 100%;
+			max-width: 100%;
+
+			font-size: 14px;
+
+			@mixin sm-min {
+				padding: 15px 30px;
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
+		.footer-links {
+			text-align: center;
+			color: $color-grey-h;
+
+			@mixin sm-min {
+				text-align: left;
+			}
+
+			a {
+				display: inline-block;
+				margin: 0 10px;
+				color: $color-white;
+				font-weight: $font-weight-medium;
+			}
+		}
+		.footer-support {
+			text-align: center;
+
+			@mixin sm-min {
+				text-align: right;
+			}
+			a {
+				display: inline-block;
+				color: $color-white;
+				font-weight: $font-weight-medium;
+			}
+		}
+	}
+}
+.nx-footer {
+	background-color: $color-grey-j;
+	padding: 15px 0;
+
+	.footer-logo{
+		padding: 5px 30px;
+
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@mixin sm-min {
+			padding: 15px 30px;
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+		@mixin lg-min {
+			flex: 0 0 20%;
+			max-width: 20%;
+		}
+
+		.footer-inner {
+			max-width: 280px;
+		}
+	}
+	.footer-content {
+		padding: 5px 30px;
+
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@mixin sm-min {
+			padding: 15px 30px;
+			flex: 0 0 40%;
+			max-width: 40%;
+		}
+		@mixin lg-min {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		p {
+			color: $color-white;
+			font-size: 12px;
+			margin-bottom: 6px;
+			
+
+			&.business-name {
+				font-weight: $font-weight-bold;
+			}
+			&.business-name,
+			&.business-info,
+			.divider {
+				opacity: 0.6;
+			}
+		}
+	}
+	.footer-copyright {
+		padding: 5px 30px;
+
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		@mixin sm-min {
+			padding: 15px 30px;
+			flex: 0 0 35%;
+			max-width: 35%;
+		}
+		@mixin lg-min {
+			flex: 0 0 30%;
+			max-width: 30%;
+		}
+	}
+
+	.footer-logo {
+		opacity: 0.6;
+
+		.footer-nx-logo {
+			display: block;
+			max-width: 150px;
+			margin-bottom: 15px;
+		}
+		.footer-nx-order-sys {
+			font-size: 18px;
+			font-weight: $font-weight-black;
+			color: $color-white;
+		}
+	}
+	.footer-copyright {
+		.footer-inner {
+			text-align: right;
+
+			p {
+				font-size: $font-size-xxs;
+				color: $color-grey-g;
+			}
+		}
+	}
+}

@@ -1,0 +1,306 @@
+/* This file contains very basic styles. */
+
+/* Login */
+
+body.page-login {
+	.nx-wrapper {
+		width: 100%;
+		min-height: 100%;
+		min-height: 100vh;
+		margin: 0;
+		padding: 0;
+		background-position: center;
+		background-size: cover;
+		background-color: $color-primary;
+		background-image: url('/assets/images/login-bg.jpg');
+	}
+
+	.flex-item {
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+		align-self: center;
+
+
+		&.login-container {
+			width: 100%;
+			margin: 0 auto;
+			max-width: 920px;
+
+			.flex-container {
+				
+				margin: 28px;
+
+				@mixin sm-min {
+					background-position: center;
+					background-size: cover;
+					background-color: $color-black;
+					background-image: url('/assets/images/login-box-bg.jpg');
+					box-shadow: 0px 7px 32px 0px rgba(0, 0, 0, 0.4);
+
+					margin: 48px 28px;
+				}
+
+
+				.flex-item {
+					padding: 26px;
+					align-self: stretch;
+					@mixin sm-min {
+						padding: 7%;
+					}
+
+					&.nx-brand-area {
+						-ms-flex: 0 0 100%;
+						-webkit-box-flex: 0;
+						flex: 0 0 100%;
+						max-width: 400px;
+						padding-left: 0;
+						padding-right: 0;
+
+
+						@mixin sm-min {
+							-ms-flex: 0 0 60%;
+							-webkit-box-flex: 0;
+							flex: 0 0 60%;
+							max-width: 60%;
+							padding: 7%;
+						}
+
+						
+
+						.login-header-inner {
+							padding: 0;
+							@mixin sm-min {
+								padding: 0 2.5%;
+							}
+
+							a.login-header-nx-logo {
+								display: block;
+								margin-bottom: 1.5rem;
+								@mixin sm-min {
+									margin-bottom: 2.5rem;
+								}
+							}
+							h4.login-header-nx-order-sys {
+								color: $color-white;
+								font-weight: $font-weight-black;
+
+								font-size: 24px;
+								@mixin sm-min {
+									font-size: 32px;
+								}
+
+								span.welcome {
+									display: block;
+									margin-bottom: 0.5rem;
+									font-weight: $font-weight-base;
+
+									font-size: 18px;
+									@mixin sm-min {
+										font-size: 32px;
+									}
+								}
+							}
+						}
+					}
+
+
+
+
+					&.login-form-area {
+						-ms-flex: 0 0 100%;
+						-webkit-box-flex: 0;
+						flex: 0 0 100%;
+						max-width: 400px;
+						background-color: $color-white;
+						
+
+						@mixin sm-min {
+							-ms-flex: 0 0 40%;
+							-webkit-box-flex: 0;
+							flex: 0 0 40%;
+							max-width: 40%;
+							margin: 0;
+							padding-bottom: 10px;
+						}
+
+						.login-form-inner {
+							max-width: 250px;
+							margin: 0 auto;
+
+							form.login-form {
+								label {
+									display: block;
+									font-size: 12px;
+									margin-bottom: 6px;
+									color: $color-primary;
+								}
+								.input-wrapper {
+									display: block;
+									position: relative;
+									input {
+										display: block;
+										font-size: 14px;
+										width: 100%;
+										height: 36px;
+										padding-left: 24px;
+										background-color: $color-white;
+										border-bottom: 2px solid $color-primary;
+
+										&:before {
+											content: "1";
+										}
+									}
+									&:before {
+										display: block;
+										font-family: 'nx-icon' !important;
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 24px;
+										height: 36px;
+										text-align: center;
+										line-height: 36px;
+										font-size: 16px;
+										color: $color-primary;
+										z-index: 1;
+									}
+								}
+
+								.username {
+									.input-wrapper {
+										&:before {
+											content: "\e90a";
+										}
+									}
+								}
+								.password {
+									margin-top: 6px;
+									.input-wrapper {
+										&:before {
+											content: "\e906";
+										}
+									}
+								}
+
+								.oneChoice {
+									padding: 10px 0;
+									label {
+										display: inline-block;
+										color: #606060;
+										width: auto;
+										margin: 0;
+									}
+								}
+
+								.lang-selector {
+									width: 100%;
+								}
+								.login-btn-box {
+									margin-top: 1rem;
+									.btn-login {
+										position: relative;
+										z-index: 1;
+										border: none !important;
+										overflow: hidden;
+
+										width: 100%;
+										padding: 15px 0;
+										border-radius: 8px;
+
+										background-color: #FF9243;
+										background: linear-gradient(270deg, #FF9243, #FF9243, #801494, #FF9243, #FF9243);
+										background-size: 800% 800%;
+
+										-webkit-animation: color-grad-btn 4s ease infinite;
+										-moz-animation: color-grad-btn 4s ease infinite;
+										animation: color-grad-btn 4s ease infinite;
+
+										span {
+											color: $color-white;
+											font-size: 14px;
+											font-weight: $font-weight-bold;
+										}
+
+										@mixin md-min {
+											&:after {
+												content: '';
+												position: absolute;
+												z-index: -1;
+												top: 0;
+												left: 0;
+												width: 0;
+												height: 100%;
+												background-color: $color-primary;
+												transition: width .4s;
+											}
+											&:hover {
+												color: $color-white;
+												&:after {
+													width: 100%;
+												}
+											}
+										}
+									}
+								}
+								.forgot-pw-box {
+
+									min-height: 72px;
+
+									.login-error {
+										text-align: left;
+										padding-top: 6px;
+										color: red;
+										font-size: $font-size-xs;
+										font-weight: $font-weight-bold;
+
+										&[login-error="true"] {
+											display: block;
+										}
+										&[login-error="false"] {
+											display: none;
+										}
+									}
+									
+									a {
+										display: block;
+										padding-top: 6px;
+										text-align: right;
+										text-decoration: underline;
+										font-weight: $font-weight-medium;
+									}
+								}
+								.company-info {
+									margin-top: 1rem;
+									p {
+										font-size: 11px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.copyright-container {
+		position: absolute;
+		left: 0;
+		bottom: 20px;
+		width: 100%;
+		font-size: 11px;
+		text-align: center;
+		color: $color-white;
+	}
+}
+
+
+
+
+
+
+
+
+

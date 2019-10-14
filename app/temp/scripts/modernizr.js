@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.7.1
- * Build https://modernizr.com/download?-svg-video-setclasses-dontmin
+ * Build https://modernizr.com/download?-hidden-svg-video-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -312,6 +312,28 @@ Modernizr.video.ogg     // 'probably'
 
     return bool;
   });
+
+/*!
+{
+  "name": "[hidden] Attribute",
+  "property": "hidden",
+  "tags": ["dom"],
+  "notes": [{
+    "name": "WHATWG Spec",
+    "href": "https://html.spec.whatwg.org/dev/interaction.html#the-hidden-attribute"
+  }, {
+    "name": "original implementation of detect code",
+    "href": "https://github.com/aFarkas/html5shiv/blob/bf4fcc4/src/html5shiv.js#L38"
+  }],
+  "polyfills": ["html5shiv"],
+  "authors": ["Ron Waldon (@jokeyrhyme)"]
+}
+!*/
+/* DOC
+Does the browser support the HTML5 [hidden] attribute?
+*/
+
+  Modernizr.addTest('hidden', 'hidden' in createElement('a'));
 
 /*!
 {

@@ -1,0 +1,380 @@
+.page-ar-statement {
+
+	.nx-content-header {
+		.content-header-inner {
+			.order-hd-filter {
+				.hd-function {
+					.flex-item {
+						.input-wrapper {
+							select.border-select {
+								min-width: 0;
+
+								@mixin sm-min {
+									width: calc(75% - 120px);
+								}
+								@mixin md-min {
+									width: calc(100% - 112px);
+								}
+								@mixin lg-min {
+									width: calc(100% - 124px);
+								}
+							}
+
+							button.btn-search {
+								margin-top: 10px;
+								width: 100%;
+								vertical-align: baseline;
+
+								@mixin sm-min {
+									margin-top: 0;
+									width: 18%;
+									margin-left: 2%;
+								}
+								@mixin md-min {
+									width: auto;
+									span.btn-text {
+										font-size: 12px;
+									}
+								}
+								@mixin lg-min {
+									/* width: 28%; */
+									span.btn-text {
+										font-size: 13px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.nx-main {
+		&.flex-container {
+			.nx-content {
+				width: 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				
+				.content-inner {
+					max-width: none;
+
+					@mixin sm-min {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+					.main-content {
+						h2.main-title {
+							@mixin xs-max {
+								display: block;
+								padding-top: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+.ar-statement-page {
+
+	h2 + .result-container {
+		.view-mode {
+			margin-bottom: 38px;
+		}
+	}
+	.result-container {
+		position: relative;
+
+		.view-mode {
+			.summary-container {
+				padding: 15px;
+				background-color: $color-white;
+				border: 1px solid $color-grey-d;
+				box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.05);
+
+				@mixin lg-min {
+					padding: 30px;
+				}
+
+				.flex-container {
+					justify-content: flex-start;
+					.summary-item {
+						width: 100%;
+						flex: 0 0 100%;
+						max-width: 100%;
+						padding: 3px 0;
+
+						span {
+							display: inline-block;
+
+							&:nth-child(2) {
+								color: $color-grey-k;
+								font-weight: $font-weight-medium;
+							}
+						}
+
+						@mixin sm-min {
+							flex: 0 0 25%;
+							max-width: 25%;
+							padding: 6px 0;
+
+							span {
+								display: block;
+								padding-right: 8px;
+								&:nth-child(2) {
+									font-size: 16px;
+								}
+							}
+						}
+						@mixin lg-min {
+							span {
+								&:nth-child(2) {
+									font-size: 18px;
+								}
+							}
+						}
+					}
+
+					&:first-child {
+						.summary-item {
+
+							@mixin sm-only {
+								flex: 0 0 50%;
+								max-width: 50%;
+							}
+
+							span {
+								display: inline-block;
+							}
+						}
+					}
+
+					&.price-per-days {
+
+						margin-top: 15px;
+						margin-bottom: 15px;
+
+
+						@mixin xs-max {
+							border-top: 1px solid #DDDDDD;
+							margin-top: 8px;
+							padding-top: 8px;
+						}
+
+						.aging-item {
+							width: 100%;
+							flex: 0 0 100%;
+							max-width: 100%;
+
+							@mixin sm-min {
+								flex: 0 0 25%;
+								max-width: 25%;
+
+								span {
+									display: block;
+									padding: 5px;
+									border-top: 1px solid $color-grey-f;
+									border-bottom: 1px solid $color-grey-f;
+
+									&:first-child {
+										background-color: $color-grey-d;
+									}
+
+									&:nth-child(2) {
+										font-size: 16px;
+										color: $color-grey-k;
+										font-weight: $font-weight-base;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			/* .aging-container {
+				padding: 15px;
+				background-color: $color-white;
+				border: 1px solid $color-grey-d;
+				box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.05);
+
+				.flex-container {
+					justify-content: flex-start;
+					.aging-item {
+						width: 100%;
+						flex: 0 0 100%;
+						max-width: 100%;
+						padding: 3px 0;
+
+						span {
+							display: inline-block;
+						}
+
+						@mixin sm-min {
+							flex: 0 0 25%;
+							max-width: 25%;
+							padding: 6px 0;
+
+							span {
+								display: block;
+								padding-right: 8px;
+							}
+						}
+					}
+
+					&:first-child {
+						.aging-item {
+							span:nth-child(2) {
+								color: $color-grey-k;
+								font-weight: $font-weight-medium;
+								@mixin sm-min {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+
+					&.price-per-days {
+
+						@mixin xs-max {
+							border-top: 1px solid #DDDDDD;
+							margin-top: 8px;
+							padding-top: 8px;
+						}
+
+						.aging-item {
+							width: 100%;
+							flex: 0 0 100%;
+							max-width: 100%;
+
+							@mixin sm-min {
+								flex: 0 0 25%;
+								max-width: 25%;
+								margin-top: 6px;
+
+								span {
+									display: block;
+									padding: 5px;
+									border-top: 1px solid $color-grey-f;
+									border-bottom: 1px solid $color-grey-f;
+
+									&:first-child {
+										background-color: $color-grey-d;
+									}
+
+									&:nth-child(2) {
+										color: $color-grey-k;
+										font-weight: $font-weight-medium;
+									}
+								}
+							}
+						}
+					}
+				}
+			} */
+
+
+
+
+			&.listview {
+				table.search-table {
+					background-color: transparent !important;
+
+					tbody {
+						tr {
+
+							@mixin sm-min {
+								&:nth-child(even) {
+									background-color: #E6E6E6;
+								}
+							}
+
+							@mixin md-min {
+								transition: background-color 0.8s ease;
+								&:hover {
+									background-color: rgba(255,146,67,0.15);
+								}
+							}
+						}
+					}
+
+					th,
+					td {
+						line-height: 1.1;
+
+						&[class*='cell-'] {
+							width: calc(100% / 10);
+						}
+
+						span {
+							a {
+								font-weight: $font-weight-bold;
+								text-decoration: underline;
+							}
+							&[class*='cd-type'] {
+								font-weight: $font-weight-medium;
+								border: 0;
+								color: $color-white;
+								background-color: $color-grey-h;
+								padding: 6px;
+								margin: -6px 0;
+								text-align: center;
+
+								@mixin sm-min {
+									padding: 6px;
+									
+								}
+							}
+							&.cd-type-invoice {
+								
+							}
+							&.cd-type-credit {
+								background-color: #1fd175;
+							}
+							&.cd-type-debit {
+								background-color: #f59e42;
+							}
+						}
+					}
+				}
+
+				@mixin xs-max {
+					table.search-table {
+						tbody {
+							tr{
+
+								td {
+
+									span {
+										&[class*='cd-type'] {
+											width: 97.5%;
+										}
+									}
+
+									&:nth-child(-n+2) {
+										float: none;
+										width: 100% !important;
+									}
+
+									/* &:first-child {
+										width: 50% !important;
+										float: left;
+										span {
+											display: block;
+										}
+									} */
+								}
+							}
+						}
+					}					
+				}
+			}
+		}
+	}
+}

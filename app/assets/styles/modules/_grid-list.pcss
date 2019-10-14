@@ -1,0 +1,40 @@
+.view-toggle {
+	position: absolute;
+	top: -36px;
+	right: 0;
+
+	label {
+		&.listview,
+		&.cardview {
+			display: inline-block;
+			margin: 0 1px;
+			padding: 0;
+			line-height: 1;
+
+			input[type="radio"] {
+				display: none;
+			}
+
+			input[type="radio"] + span.icon {
+				font-size: 28px;
+				color: $color-grey-g;
+				cursor: pointer;
+			}
+			input[type="radio"]:checked + span.icon {
+				color: $color-primary;
+			}
+
+			&:hover {
+				@mixin md-min {
+					input[type="radio"] + span.icon {
+						color: $color-primary;
+					}
+				}			
+			}
+		}
+	}
+
+	@mixin xs-max {
+		display: none !important;
+	}
+}

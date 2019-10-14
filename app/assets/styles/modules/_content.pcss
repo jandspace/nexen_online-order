@@ -1,0 +1,50 @@
+.nx-content {
+	.content-inner {
+		.main-content {
+
+			h2.main-title {
+				display: none;
+				margin: 20px 0 10px 0;
+				font-size: $font-size-md;
+				font-weight: $font-weight-bold;
+				text-transform: uppercase;
+				color: $color-primary;
+
+				@mixin sm-min {
+					display: block;
+				}
+				@mixin md-min {
+					margin: 20 0 15px 0;
+					font-size: $font-size-lg;
+				}
+				@mixin lg-min {
+					margin: 20px 0 15px 0;
+				}
+			}
+
+			.func-download {
+				text-align: right;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				a.excel-download {
+					background-color: $color-grey-f;
+					color: $color-grey-i;
+					padding: 8px 16px;
+					img {
+						width: 18px;
+						height: 18px;
+						margin-right: 6px;
+					}
+					@mixin md-min {
+						&:hover {
+							background-color: $color-grey-g;
+						}
+					}
+				}
+				@mixin sm-min {
+					margin-top: -48px;
+				}
+			}
+		}
+	}
+}

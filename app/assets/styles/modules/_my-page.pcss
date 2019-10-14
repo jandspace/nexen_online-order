@@ -1,0 +1,135 @@
+.page-my {
+
+	.nx-content-header {
+		.title-bar {
+			padding: 15px 0;
+			margin: 0;
+			border: 0;
+			text-align: center;
+
+			h2.basic-title {
+				display: block;
+				&:after {
+					content: none;
+				}
+			}
+		}
+	}
+
+	.nx-wrapper {
+		padding-bottom: 4%;
+		background-color: #CCCCCC;
+	}
+	.nx-main {
+		&.flex-container {
+			.nx-content {
+				width: 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				
+				.content-inner {
+					max-width: none;
+
+					@mixin sm-min {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+					.main-content {
+						h2.main-title {
+							@mixin xs-max {
+								display: block;
+								padding-top: 15px;
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+.my-page {
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.result-container {
+		position: relative;
+		border-top: 1px solid $color-grey-f;
+
+		.view-mode {
+
+			.field-items {
+				padding: 3% 5%;
+				background-color: #EEEEEE;
+				border-radius: 10px;
+				box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.1);
+			}
+
+			.field-wrapper {
+
+				padding: 10px 0;
+
+				label.label {
+					flex: 2;
+					font-weight: $font-weight-medium;
+					text-transform: uppercase;
+				}
+				div.input-wrapper {
+					flex: 3;
+
+					input,
+					select {
+						border: 1px solid $color-grey-f;
+					}
+					input[type=text].disabled {
+						font-weight: $font-weight-bold;
+						border: none;
+						background-color: transparent;
+						padding-left: 0;
+					}
+					input[type=checkbox],
+					input[type=radio] {
+						width: auto;
+						height: auto;
+					}
+				}
+
+				&.btn-container {
+					text-align: center;
+					margin: 2.5% 0;
+
+					.btn {
+						min-width: 140px;
+						padding: 15px;
+						margin: 0 5px;
+						text-transform: uppercase;
+
+						&.cd-cancel {
+							background-color: $color-grey-h;
+						}
+
+						&:hover {
+							filter: brightness(85%);
+						}
+					}
+				}
+
+				@mixin xs-max {
+					&.sold-to,
+					&.ship-to {
+						label.label {
+							padding-bottom: 6px;
+						}
+						label.label,
+						div.input-wrapper {						
+							flex: 0 0 100%;
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,237 @@
+.modal.do-no-modal {
+	.modal-dialog {
+		width: auto;
+		margin: 15px;
+
+		@mixin sm-min {
+			margin: 30px auto;
+			width: calc(100% - 80px);
+			max-width: 920px;
+		}
+
+		.modal-content {
+			.modal-header {
+				padding: 0;
+				border-bottom: none;
+				box-shadow: 1px 1px 8px rgba(0,0,0,.2);
+				z-index: 1;
+
+				h5.modal-title {
+					padding: 1rem 15px;
+					font-weight: $font-weight-medium;
+				}
+
+
+				button.close {
+					display: block;
+					/* position: fixed; */
+					top: 0;
+					right: 0;
+					margin: 0;
+					opacity: 1;
+					width: 54px;
+					height: 54px;
+					color: $color-white;
+					background: $color-grey-k;
+					line-height: 48px;
+					z-index: 9;
+					padding: 0;
+					text-shadow: none;
+
+					span {
+						font-size: 32px;
+						display: block;
+					}
+
+					@mixin sm-min {
+						position: static;
+					}
+					@mixin md-min {
+						&:hover {
+							background-color: $color-primary-light;
+						}
+					}
+				}
+			}
+			.modal-body {
+				padding: 15px;
+
+				.do-no-container {
+
+					.item-container {
+						border-bottom: 4px solid #DDDDDD;
+						margin-bottom: 24px;
+						padding-bottom: 24px;
+
+						.image-container {
+							float: left;
+							width: 80px;
+							@mixin sm-min {
+								width: 82px;
+							}
+							@mixin md-min {
+								width: 100px;
+							}
+							.item-image-center {
+								border: 1px solid #DDDDDD;
+							}
+						}
+						.desc-container {
+							padding-left: 15px;
+							overflow: hidden;
+
+							h3.prod-name {
+								font-size: 12px;
+								line-height: 1.1;
+								font-weight: bold;
+								color: #A04FAF;
+							}
+							span {
+								&.cd-label {
+									[class*="cd-label-"] {
+										padding: 0 15px 0 0;
+									}
+								}
+							}
+							.spec-open {
+								@mixin sm-min {
+									display: none;
+								}
+								padding-top: 6px;
+								a {
+									text-decoration: none;
+								}
+							}
+							.spec-container {
+								@mixin sm-min {
+									display: block;
+								}
+							}
+							.prod-spec {
+								list-style: none;
+								margin: 10px 0 0 0;
+								padding: 0;
+								justify-content: flex-start;
+
+								li.spec-item {
+									padding: 3px 0;
+									border-bottom: 1px solid #DDDDDD;
+
+									-ms-flex: 0 0 100%;
+									-webkit-box-flex: 0;
+									flex: 0 0 100%;
+									max-width: 100%;
+
+									@mixin sm-min {
+										-ms-flex: 0 0 50%;
+										-webkit-box-flex: 0;
+										flex: 0 0 50%;
+										max-width: 50%;
+
+										padding: 3px;
+										border: 1px solid #DDDDDD;
+										margin: -1px 0 0 -1px;
+									}
+									@mixin lg-min {
+										-ms-flex: 0 0 33.33333333%;
+										-webkit-box-flex: 0;
+										flex: 0 0 33.33333333%;
+										max-width: 33.33333333%;
+									}
+									.data-label {
+										min-width: 72px;
+										margin-right: 6px;
+										display: inline-block;
+										font-size: 11px;
+										text-transform: uppercase;
+									}
+									.d-field {
+										font-weight: $font-weight-medium;
+
+									}
+								}
+							}
+
+							.price-info-container {
+								.price-info {
+									padding: 3px 0;
+									text-align: right;
+									span {
+										display: inline-block;
+										&.data-label {
+											margin-right: 4px;
+										}
+										&.d-field {
+											color: $color-grey-k;
+											font-weight: $font-weight-medium;
+											&.cd-net-amount {
+												font-size: 16px;
+											}
+										}
+									}
+								}
+								@mixin sm-min {
+									text-align: right;
+									.price-info {
+										display: inline-block;
+										padding: 3px 10px;
+									}
+								}
+							}
+
+							.shop-func-container {
+								text-align: right;
+								.stock {
+									.cd-stock {
+										font-weight: $font-weight-bold;
+										color: $color-primary-light;
+									}
+								}
+								.price {
+									display: inline-block;
+									margin: 0 10px 0 0;
+									vertical-align: bottom;
+
+									.cd-unit-price {
+										font-size: 20px;
+										color: $color-grey-k;
+									}
+								}
+								.add-to-cart {
+									display: inline-block;
+
+									select {
+										width: 58px;
+										border-radius: 6px;
+									}
+								}
+							}
+
+							
+							span {
+								&.cd-prod-code {
+									font-weight: bold;
+									color: $color-primary-light;
+								}
+								&.cd-label {
+									[class*="cd-label-"] {
+										display: inline-block;
+										padding: 0;
+										@mixin sm-min {
+											padding: 0 4px;
+										}
+
+										&:before {
+											padding-right: 3px;
+											color: $color-primary;
+										}
+									}						
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

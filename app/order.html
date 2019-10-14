@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]>
+<html class="iem7">
+<![endif]-->
+<!--[if (lte IE 6)&(!IEMobile)]>
+<html class="ie6 ie6-7 ie6-8">
+<![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>
+<html class="ie7 ie6-7 ie6-8">
+<![endif]-->
+<!--[if (IE 8)&(!IEMobile)]>
+<html class="ie8 ie6-8">
+<![endif]-->
+<!--[if (IE 9)&(!IEMobile)]>
+<html class="ie9 ie6-9">
+<![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)]><!-->
+<html lang="en" >
+	<!--<![endif]-->
+	<head profile="http://www.w3.org/1999/xhtml/vocab">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="MobileOptimized" content="width" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="cleartype" content="on" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- IE -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<!-- other browsers -->
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<title>Nexen Online Order System | Nexen Tyres</title>
+
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/assets/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#801494">
+		<meta name="msapplication-TileColor" content="#9f00a7">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="/assets/base/bootstrap.min.css">
+
+		<!-- Bootstrap DatePicker -->
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
+		<link href="/assets/base/datepicker.css" rel="stylesheet" type="text/css" />
+
+		<!-- Style: in Gulp -->
+		<link rel="stylesheet" href="temp/styles/styles.css"><!-- App -->
+	</head>
+
+
+
+	<body dir="ltr" class="html page-order">
+
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Header
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<header class="nx-header">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href="index.html"><img src="/assets/images/nexen-logo.png" class="img-responsive nx-logo" alt="Nexen - Online Order System"></a>
+		
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			<span class="menu-label">MENU</span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="product.html">Product</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="stock.html">Stock</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="order.html">Order</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="order-status.html">Order Status</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="ar-statement.html">Open A/R Statement</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="label.html">Label Search</a>
+				</li>
+			</ul>
+			<div class="quicklink my-2 my-lg-0">
+				<div class="dropdown mypage">
+					<a class="btn btn-secondary mycart-btn" href="cart.html">My Cart</a>
+					<a class="btn btn-secondary dropdown-toggle mypage-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">9876543</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+						<a class="dropdown-item" href="mypage.html">My page</a>
+						<a class="dropdown-item" href="notice.html">Notice</a>
+						<a class="dropdown-item" href="notice.html">Contact Us</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+
+
+		<div class="nx-wrapper">
+			<div class="nx-content-header flex-item">
+				<div class="content-header-inner">
+					<!-- Title Bar -->
+					<div class="title-bar">
+						<h2 class="basic-title">Online Order System</h2>
+						<h1 class="page-title">Order</h1>
+					</div>
+
+
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Search Option
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<form id="Order-Hd-Filter-upper" class="order-hd-filter">
+	<div class="hd-function upper flex-container">
+		<div class="flex-item">
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Customer-L" class="label" for="Hd-Customer">Customer:</label>
+				<div class="input-wrapper select-item customer">
+					<select id="Hd-Customer" class="border-select">
+						<option value="301105" selected>301105 – Jnet pneus SARL / 9 rue de fre / 90400 FR</option>
+						<option value="999999">999999 – Xxxx xxxxx XXXX / 9 rue de fre / 00000 FR</option>
+						<option value="333333">333333 – Aaaa aaaaa AAAA / 9 rue de fre / 00000 FR</option>
+					</select>
+				</div>
+			</div>
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Pay-to-Party-L" class="label" for="Hd-Pay-to-Party">Pay-to-party:</label>
+				<div class="input-wrapper select-item pay-to-party">
+					<select id="Hd-Pay-to-Party" class="border-select">
+						<option value="301105" selected>301105 – Jnet pneus SARL / 9 rue de fre / 90400 FR</option>
+						<option value="999999">999999 – Xxxx xxxxx XXXX / 9 rue de fre / 00000 FR</option>
+						<option value="333333">333333 – Aaaa aaaaa AAAA / 9 rue de fre / 00000 FR</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="flex-item">
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Quick-Order-L" class="label" for="Hd-Quick-Order">Quick Order:</label>
+				<div class="input-wrapper multiple-item quick-order">
+					<input type="text" id="Quick-Prod-Code" name="" value="" maxlength="40" title="Product Code" placeholder="Input Product Code" class="">
+					<select id="Hd-Qty" class="qty-no">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">2</option>
+						<option value="789">789</option>
+					</select>
+					<button type="button" class="btn btn-cart">
+						<span class="icon-cart"><!--icon--></span>
+						<span class="btn-text">Add to Cart</span>
+					</button>
+				</div>
+			</div>
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Shopping-List-L" class="label" for="Hd-Shopping-List"><!-- Add from shopping list --></label>
+				<div class="input-wrapper shopping-list">
+					<button type="button" class="btn btn-shopping-list" data-toggle="modal" data-target="#ShopList-Modal">
+						<span class="icon-favourite"><!--icon--></span>
+						<span class="btn-text">Add from shopping list</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hd-function lower flex-container">
+		<div class="flex-item">
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Product-Search-L" class="label" for="Hd-Product-Search">Product search:</label>
+				<div class="input-wrapper multiple-item prod-search">
+					<input type="text" id="Product-Search" name="" value="" maxlength="40" title="Product Code" placeholder="e.g. 205516 to search 205/55R/16" class="" />
+					<select id="Product-Search-Opt" class="">
+						<option value="size" selected>Size</option>
+						<option value="nx-code">NX code</option>
+						<option value="pattern">Pattern</option>											
+						<option value="brand">Brand</option>
+					</select>
+					<button type="submit" class="btn btn-search">
+						<span class="btn-text">Search</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-item">
+			<div class="field-wrapper flex-container">
+				<label id="Hd-Sort-By-L" class="label" for="Hd-Sort-By">Sort by:</label>
+				<div class="input-wrapper select-item sort-by">
+					<select id="Hd-Sort-By" class="">
+						<option value="nx-code" selected>NX code</option>
+						<option value="pattern">Pattern</option>
+						<option value="size">Size</option>
+						<option value="brand">Brand</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+
+
+
+				</div>
+			</div>
+			<div class="nx-main clearfix flex-container">
+
+
+
+
+				<div class="nx-secondary-sidebar flex-item wrap-in-small">
+					<div class="sidebar-inner sidebar-cart">
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Sidebar Cart Content
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<div class="minicart cart-lg">
+	<h2 class="sidebar-title">My Cart</h2>
+
+	<button class="btn btn-cart-summary collapsed" type="button" data-toggle="collapse" data-target="#Minicart-collapse" aria-expanded="false" aria-controls="Minicart-collapse">
+		<span class="total-item">
+			<span class="total">TOTAL:</span>
+			<span class="item-no">3</span>
+			<span class="items">item(s)</span>
+		</span>
+		<span class="total-price">
+			€9999.00
+		</span>
+	</button>
+	
+	<!-- Order Number -->
+	<form class="minicart-wrapper" id="Minicart-Wrapper">
+		<div class="collapse minicart-inner" id="Minicart-collapse">
+			<div class="cart-box order-no">
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Order-No-L" class="label" for="Cart-Order-No">Order No:</label>
+					<div class="input-wrapper input-item">
+						<input type="text" id="Cart-Order-No" name="" value="98765432" title="Order No" placeholder="Order No" class="">
+					</div>
+				</div>
+			</div>
+			<div class="cart-box items" id="Cart-Items">
+				<table class="cart-table cart-item-table">
+					<thead>
+						<tr>
+							<th><span class="code">NX code</span></th>
+							<th><span class="qty">Qty</span></th>
+							<th><span class="price">Price (EUR €)</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="code">NX12345</span></td>
+							<td><span class="qty"><select id="Qty" class="qty-no"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option></select></span></td>
+							<td>
+								<span class="price">€1234.00</span>
+								<button type="submit" class="btn delete-item">
+									<span class="icon-delete"><!-- icon --></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="code">NX12345</span></td>
+							<td><span class="qty"><select id="Qty" class="qty-no"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option></select></span></td>
+							<td>
+								<span class="price">€1234.00</span>
+								<button type="submit" class="btn delete-item">
+									<span class="icon-delete"><!-- icon --></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="code">NX12345</span></td>
+							<td><span class="qty"><select id="Qty" class="qty-no"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option></select></span></td>
+							<td>
+								<span class="price">€1234.00</span>
+								<button type="submit" class="btn delete-item">
+									<span class="icon-delete"><!-- icon --></span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="cart-table cart-fee-table">
+					<tbody>
+						<tr>
+							<td><span class="fee">Freight</span></td>
+							<td><span class="price">€10.00</span></td>
+						</tr>
+						<tr>
+							<td><span class="fee">Vol.DC </span></td>
+							<td><span class="price">2.00%</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="cart-table cart-total-table">
+					<tbody>
+						<tr>
+							<td>
+								<span class="total">TOTAL:</span>
+								<span class="item-no">3</span>
+								<span class="items">item(s)</span>
+							</td>
+							<td>
+								<span class="total-price">
+									<sub>EUR</sub>
+									€9999.00
+								</span>
+								<div class="credit-info">
+									<div>Credit Limit: €99,999.00</div>
+									<div>Prix Net HT don't eco contribution</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="cart-box extra" id="Cart-Extra">
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Extra1-L" class="label" for="Cart-Extra1">Customer PO:</label>
+					<div class="input-wrapper input-item">
+						<input type="text" id="Cart-Extra1" name="" value="" title="Customer PO" placeholder="Customer PO" class="">
+					</div>
+				</div>
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Extra2-L" class="label" for="Cart-Extra2">R.D.D:</label>
+					<div class="input-wrapper input-item">
+						<div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+							<input class="form-control" type="text" placeholder="mm/dd/yyyy" readonly />
+							<span class="input-group-addon">
+								<span class="icon-date"><!-- icon --></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Extra3-L" class="label" for="Cart-Extra3">Remark 1:</label>
+					<div class="input-wrapper input-item">
+						<input type="text" id="Cart-Extra3" name="" value="" title="Remark 1" placeholder="Remark 1" class="">
+					</div>
+				</div>
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Extra4-L" class="label" for="Cart-Extra4">Remark 2:</label>
+					<div class="input-wrapper input-item">
+						<input type="text" id="Cart-Extra4" name="" value="" title="Remark 2" placeholder="Remark 2" class="">
+					</div>
+				</div>
+				<div class="field-wrapper flex-container">
+					<label id="Cart-Extra5-L" class="label" for="Cart-Extra5">Remark 3:</label>
+					<div class="input-wrapper input-item">
+						<input type="text" id="Cart-Extra5" name="" value="" title="Remark 3" placeholder="Remark 3" class="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart-box button" id="Cart-View">
+			<div class="agree-t-n-c">
+				<input type="checkbox" value="Brand-Item2" id="Brand-Item2" class="" name="">
+				I read and accept the <a href="#" data-toggle="modal" data-target="#TNC-Modal">Terms & Conditions</a>
+			</div>
+			<button type="submit" class="btn btn-view-cart">
+				<span class="btn-text">PROCESS ORDER</span>
+			</button>
+		</div>
+	</form>
+</div>
+
+
+
+					</div>
+				</div>
+				
+				<div class="nx-primary-sidebar flex-item wrap-in-small">
+					<div class="sidebar-inner sidebar-filter">
+
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Sidebar Filter Content
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<div class="filter filter-sm">
+	<a class="btn filter-trigger" data-toggle="collapse" href="#collapse-Filter" role="button" aria-expanded="false" aria-controls="collapse-Filter">
+		Filter result by
+	</a>
+</div>
+<div class="collapse filter filter-lg" id="collapse-Filter">
+	<h2 class="sidebar-title">Filter results by</h2>
+	
+	<!-- Filter by BRAND -->
+	<div class="filter-box" id="Filter-Brand-Wrapper">
+		<a class="box-title" data-toggle="collapse" href="#collapse-Filter-Brand" role="button" aria-expanded="false" aria-controls="collapse-Filter-Brand">
+			Brand
+		</a>
+		<form class="collapse show" id="collapse-Filter-Brand">
+			<div id="Brand-item" class="box-items">
+				<div class="oneChoice">
+					<input type="checkbox" value="Brand-Item1" id="Brand-Item1" class="" name="">
+					<label class="label postField" id="" for="Brand-Item1">NX</label>
+				</div>
+				<div class="oneChoice">
+					<input type="checkbox" value="Brand-Item2" id="Brand-Item2" class="" name="">
+					<label class="label postField" id="" for="Brand-Item2">Other</label>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- Filter by SEASON -->
+	<div class="filter-box" id="Filter-Season-Wrapper">
+		<a class="box-title" data-toggle="collapse" href="#collapse-Filter-Season" role="button" aria-expanded="false" aria-controls="collapse-Filter-Season">
+			Season
+		</a>
+		<form class="collapse show" id="collapse-Filter-Season">
+			<div id="Season-item" class="box-items">
+				<div class="oneChoice">
+					<input type="checkbox" value="Season-Item1" id="Season-Item1" class="" name="">
+					<label class="label postField" id="" for="Season-Item1">All Weather</label>
+				</div>
+				<div class="oneChoice">
+					<input type="checkbox" value="Season-Item2" id="Season-Item2" class="" name="">
+					<label class="label postField" id="" for="Season-Item2">Summer</label>
+				</div>
+				<div class="oneChoice">
+					<input type="checkbox" value="Season-Item3" id="Season-Item3" class="" name="">
+					<label class="label postField" id="" for="Season-Item3">Winter</label>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<a class="close-filter" data-toggle="collapse" href="#collapse-Filter" role="button" aria-expanded="false" aria-controls="collapse-Filter">
+		<span class="icon-delete"><!-- icon --></span>
+		Close filter
+	</a>
+</div>
+
+						<div class="banner-container">
+							<div class="banner-item">
+								<a href="http://www.nexentire.com/de/" class="banner-wrap" target="_blank">
+									<img src="/assets/images/nx-banner-homepage.jpg" class="img-responsive" />
+								</a>
+							</div>
+							<div class="banner-item">
+								<a href="https://nexentire-garantie.de/" class="banner-wrap" target="_blank">
+									<img src="/assets/images/nx-banner-grantie.jpg" class="img-responsive" />
+								</a>
+							</div>
+							<div class="banner-item">
+								<a href="https://www.nexentire-b2b.de/" class="banner-wrap" target="_blank">
+									<img src="/assets/images/nx-banner-extranet.jpg" class="img-responsive" />
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<main class="nx-content flex-item" role="main">
+					<div class="content-inner">
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Main Content
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<div class="main-content">
+	<div class="search-result" id="Search-Result">
+		<h2 class="main-title">Search result</h2>
+		<div class="result-container">
+			<div class="view-toggle">
+				<label class="listview">
+					<input type="radio" id="List" name="ViewSelct" value="list" checked />
+					<span class="icon icon-viewlist"><!-- ICON --></span>
+				</label>
+				<label class="cardview">
+					<input type="radio" id="Card" name="ViewSelct" value="card" />
+					<span class="icon icon-viewcard"><!-- ICON --></span>
+				</label>
+			</div>			
+
+			<div class="flex-container">
+				<div class="flex-item no-item">
+					Total <span class="no" id="Item-No">12</span> products found
+				</div>
+				<div class="flex-item currency">
+					Currency: <span class="euro">EUR €</span>
+				</div>
+			</div>
+
+			<div class="order-result-items view-mode listview" id="View-Switch">
+				<div class="table-container">
+					<table class="search-table order-items-table">
+						<thead>
+							<tr>
+								<th class="cell-1" rowspan="2"><span class="data-1">Code</span></th>
+								<th class="cell-2"><span class="data-2">Size</span></th>
+								<th class="cell-3"><span class="data-3">Load index</span></th>
+								<th class="cell-4"><span class="data-4">Brand</span></th>
+								<th class="cell-5" rowspan="2"><span class="data-5">Label</span></th>
+								<th class="cell-6"><span class="data-6">Price</span></th>
+								<th class="cell-7" rowspan="2"><span class="data-7">Add to cart</span></th>
+							</tr>
+							<tr>
+								<th class="cell-2"><span class="data-2">Pattern</span></th>
+								<th class="cell-3"><span class="data-3">Speed</span></th>
+								<th class="cell-4"><span class="data-4">Season</span></th>
+								<th class="cell-6"><span class="data-6">Stock</span></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+				<!-- Product Sample 1 -->
+				<article class="item-container" id="Search-Item-1">
+					<div class="card-container">
+						<div class="flex-container grid">
+							<div class="flex-item image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center" data-toggle="modal" data-target="#Prodinfo-1-Modal">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-item desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX111111</span>
+											<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+										</h3>
+										<ul class="prod-spec">
+											<li class="spec-item">
+												<span class="data-label">EAN:</span>
+												<span class="d-field cd-ean">8807622105357</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Brand:</span>
+												<span class="d-field cd-brand">Nexen</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Size:</span>
+												<span class="d-field cd-size">180/70R 15A</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Pattern:</span>
+												<span class="d-field cd-pattern">XxXxXxXx</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Load index:</span>
+												<span class="d-field cd-load-index">99</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Speed:</span>
+												<span class="d-field cd-speed">R</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Season:</span>
+												<span class="d-field cd-season">Summer</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Label:</span>
+												<span class="d-field cd-label">
+													<span class="d-field cd-label-efficiency icon-fuel">A</span>
+													<span class="d-field cd-label-wetgrip icon-rain">A</span>
+													<span class="d-field cd-label-noise icon-noise">70dB</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<span class="data-label currency">EUR</span>
+											<span class="d-field cd-was-price">€1999.00</span>
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<table class="search-table order-items-table">
+							<tbody>
+								<tr>
+									<td class="cell-1" rowspan="2">
+										<span class="d-field cd-prod-code">NX111111</span>
+										<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+									</td>
+									<td class="cell-2">
+										<span class="d-field cd-size">180/70R 15A</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-load-index">99</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-brand">Nexen</span>
+									</td>
+									<td class="cell-5" rowspan="2">
+										<span class="d-field cd-label">
+											<span class="d-field cd-label-efficiency icon-fuel">A</span>
+											<span class="d-field cd-label-wetgrip icon-rain">A</span>
+											<span class="d-field cd-label-noise icon-noise">70dB</span>
+										</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-was-price">€1534.00</span>
+										<span class="d-field cd-unit-price">€1234.00</span>
+									</td>
+									<td class="cell-7" rowspan="2">
+										<span class="d-field cd-cart">
+											<select id="Qty" class="qty-no">
+												<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+											</select>
+											<button type="button" class="btn icon-cart cd-add-cart">
+												Add <span class="to-cart">to cart</span>
+											</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-2">
+										<span class="d-field cd-pattern">XxXxXxXx</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-speed">R</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-season">All weather</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-stock">999+</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<!-- Product Sample 2 -->
+				<article class="item-container" id="Search-Item-2">
+					<div class="card-container">
+						<div class="flex-container grid">
+							<div class="flex-item image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center" data-toggle="modal" data-target="#Prodinfo-1-Modal">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/01/31/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-item desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX222222</span>
+											<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+										</h3>
+										<ul class="prod-spec">
+											<li class="spec-item">
+												<span class="data-label">EAN:</span>
+												<span class="d-field cd-ean">8807622105357</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Brand:</span>
+												<span class="d-field cd-brand">Nexen</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Size:</span>
+												<span class="d-field cd-size">180/70R 15A</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Pattern:</span>
+												<span class="d-field cd-pattern">XxXxXxXx</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Load index:</span>
+												<span class="d-field cd-load-index">99</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Speed:</span>
+												<span class="d-field cd-speed">R</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Season:</span>
+												<span class="d-field cd-season">Summer</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Label:</span>
+												<span class="d-field cd-label">
+													<span class="d-field cd-label-efficiency icon-fuel">A</span>
+													<span class="d-field cd-label-wetgrip icon-rain">A</span>
+													<span class="d-field cd-label-noise icon-noise">70dB</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<span class="data-label currency">EUR</span>
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+												<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+											</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<table class="search-table order-items-table">
+							<tbody>
+								<tr>
+									<td class="cell-1" rowspan="2">
+										<span class="d-field cd-prod-code">NX222222</span>
+										<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+									</td>
+									<td class="cell-2">
+										<span class="d-field cd-size">185/75R 16B</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-load-index">99</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-brand">Nexen</span>
+									</td>
+									<td class="cell-5" rowspan="2">
+										<span class="d-field cd-label">
+											<span class="d-field cd-label-efficiency icon-fuel">B</span>
+											<span class="d-field cd-label-wetgrip icon-rain">B</span>
+											<span class="d-field cd-label-noise icon-noise">75dB</span>
+										</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-unit-price">€1234.00</span>
+									</td>
+									<td class="cell-7" rowspan="2">
+										<span class="d-field cd-cart">
+											<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+											<button type="button" class="btn icon-cart cd-add-cart">
+												Add <span class="to-cart">to cart</span>
+											</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-2">
+										<span class="d-field cd-pattern">XxXxXxXx</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-speed">R</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-season">Summer</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-stock">999+</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<!-- Product Sample 3 -->
+				<article class="item-container" id="Search-Item-3">
+					<div class="card-container">
+						<div class="flex-container grid">
+							<div class="flex-item image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center" data-toggle="modal" data-target="#Prodinfo-1-Modal">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2019/04/02/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-item desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX333333</span>
+											<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+										</h3>
+										<ul class="prod-spec">
+											<li class="spec-item">
+												<span class="data-label">EAN:</span>
+												<span class="d-field cd-ean">8807622105357</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Brand:</span>
+												<span class="d-field cd-brand">Nexen</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Size:</span>
+												<span class="d-field cd-size">180/70R 15A</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Pattern:</span>
+												<span class="d-field cd-pattern">XxXxXxXx</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Load index:</span>
+												<span class="d-field cd-load-index">99</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Speed:</span>
+												<span class="d-field cd-speed">R</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Season:</span>
+												<span class="d-field cd-season">Summer</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Label:</span>
+												<span class="d-field cd-label">
+													<span class="d-field cd-label-efficiency icon-fuel">A</span>
+													<span class="d-field cd-label-wetgrip icon-rain">A</span>
+													<span class="d-field cd-label-noise icon-noise">70dB</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<span class="data-label currency">EUR</span>
+											<span class="d-field cd-was-price">€1999.00</span>
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+												<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+											</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<table class="search-table order-items-table">
+							<tbody>
+								<tr>
+									<td class="cell-1" rowspan="2">
+										<span class="d-field cd-prod-code">NX333333</span>
+										<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+									</td>
+									<td class="cell-2">
+										<span class="d-field cd-size">190/80R 17C</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-load-index">99</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-brand">Nexen</span>
+									</td>
+									<td class="cell-5" rowspan="2">
+										<span class="d-field cd-label">
+											<span class="d-field cd-label-efficiency icon-fuel">C</span>
+											<span class="d-field cd-label-wetgrip icon-rain">C</span>
+											<span class="d-field cd-label-noise icon-noise">80dB</span>
+										</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-was-price">€1534.00</span>
+										<span class="d-field cd-unit-price">€1234.00</span>
+									</td>
+									<td class="cell-7" rowspan="2">
+										<span class="d-field cd-cart">
+											<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+											<button type="button" class="btn icon-cart cd-add-cart">
+												Add <span class="to-cart">to cart</span>
+											</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-2">
+										<span class="d-field cd-pattern">XxXxXxXx</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-speed">R</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-season">Summer</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-stock">999+</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<!-- Product Sample 4 -->
+				<article class="item-container" id="Search-Item-4">
+					<div class="card-container">
+						<div class="flex-container grid">
+							<div class="flex-item image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center" data-toggle="modal" data-target="#Prodinfo-1-Modal">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/02/01/list_thumb_30.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-item desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX444444</span>
+											<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+										</h3>
+										<ul class="prod-spec">
+											<li class="spec-item">
+												<span class="data-label">EAN:</span>
+												<span class="d-field cd-ean">8807622105357</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Brand:</span>
+												<span class="d-field cd-brand">Nexen</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Size:</span>
+												<span class="d-field cd-size">180/70R 15A</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Pattern:</span>
+												<span class="d-field cd-pattern">XxXxXxXx</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Load index:</span>
+												<span class="d-field cd-load-index">99</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Speed:</span>
+												<span class="d-field cd-speed">R</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Season:</span>
+												<span class="d-field cd-season">Summer</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Label:</span>
+												<span class="d-field cd-label">
+													<span class="d-field cd-label-efficiency icon-fuel">A</span>
+													<span class="d-field cd-label-wetgrip icon-rain">A</span>
+													<span class="d-field cd-label-noise icon-noise">70dB</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<span class="data-label currency">EUR</span>
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+												<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+											</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<table class="search-table order-items-table">
+							<tbody>
+								<tr>
+									<td class="cell-1" rowspan="2">
+										<span class="d-field cd-prod-code">NX444444</span>
+										<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+									</td>
+									<td class="cell-2">
+										<span class="d-field cd-size">180/70R 15A</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-load-index">99</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-brand">Nexen</span>
+									</td>
+									<td class="cell-5" rowspan="2">
+										<span class="d-field cd-label">
+											<span class="d-field cd-label-efficiency icon-fuel">A</span>
+											<span class="d-field cd-label-wetgrip icon-rain">A</span>
+											<span class="d-field cd-label-noise icon-noise">70dB</span>
+										</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-unit-price">€1234.00</span>
+									</td>
+									<td class="cell-7" rowspan="2">
+										<span class="d-field cd-cart">
+											<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+											<button type="button" class="btn icon-cart cd-add-cart">
+												Add <span class="to-cart">to cart</span>
+											</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-2">
+										<span class="d-field cd-pattern">XxXxXxXx</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-speed">R</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-season">Summer</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-stock">999+</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<!-- Product Sample 5 -->
+				<article class="item-container" id="Search-Item-5">
+					<div class="card-container">
+						<div class="flex-container grid">
+							<div class="flex-item image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center" data-toggle="modal" data-target="#Prodinfo-1-Modal">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/03/12/list_thumb_1.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-item desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX555555</span>
+											<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+										</h3>
+										<ul class="prod-spec">
+											<li class="spec-item">
+												<span class="data-label">EAN:</span>
+												<span class="d-field cd-ean">8807622105357</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Brand:</span>
+												<span class="d-field cd-brand">Nexen</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Size:</span>
+												<span class="d-field cd-size">180/70R 15A</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Pattern:</span>
+												<span class="d-field cd-pattern">XxXxXxXx</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Load index:</span>
+												<span class="d-field cd-load-index">99</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Speed:</span>
+												<span class="d-field cd-speed">R</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Season:</span>
+												<span class="d-field cd-season">Summer</span>
+											</li>
+											<li class="spec-item">
+												<span class="data-label">Label:</span>
+												<span class="d-field cd-label">
+													<span class="d-field cd-label-efficiency icon-fuel">A</span>
+													<span class="d-field cd-label-wetgrip icon-rain">A</span>
+													<span class="d-field cd-label-noise icon-noise">70dB</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<span class="data-label currency">EUR</span>
+											<span class="d-field cd-was-price">€1999.00</span>
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+												<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+											</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<table class="search-table order-items-table">
+							<tbody>
+								<tr>
+									<td class="cell-1" rowspan="2">
+										<span class="d-field cd-prod-code">NX555555</span>
+										<button type="button" class="btn cd-prod-info" data-toggle="modal" data-target="#Prodinfo-1-Modal">More Info</button>
+									</td>
+									<td class="cell-2">
+										<span class="d-field cd-size">185/75R 16B</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-load-index">99</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-brand">Nexen</span>
+									</td>
+									<td class="cell-5" rowspan="2">
+										<span class="d-field cd-label">
+											<span class="d-field cd-label-efficiency icon-fuel">B</span>
+											<span class="d-field cd-label-wetgrip icon-rain">B</span>
+											<span class="d-field cd-label-noise icon-noise">75dB</span>
+										</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-was-price">€1534.00</span>
+										<span class="d-field cd-unit-price">€1234.00</span>
+									</td>
+									<td class="cell-7" rowspan="2">
+										<span class="d-field cd-cart">
+											<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+											<button type="button" class="btn icon-cart cd-add-cart">
+												Add <span class="to-cart">to cart</span>
+											</button>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell-2">
+										<span class="d-field cd-pattern">XxXxXxXx</span>
+									</td>
+									<td class="cell-3">
+										<span class="d-field cd-speed">R</span>
+									</td>
+									<td class="cell-4">
+										<span class="d-field cd-season">Summer</span>
+									</td>
+									<td class="cell-6">
+										<span class="d-field cd-stock">999+</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<div class="page-nav-container">
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">&laquo; Prev</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next &raquo;</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+					</div>
+				</main>
+			</div>
+		</div>
+
+
+
+
+<!-- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+	INCLUDE: Footer
+< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < -->
+<div class="nx-footer-above">
+	<div class="nx-footer-inner privacy-legal flex-container">
+		<div class="footer-links">
+			<a href="privacy.php">Privacy</a>
+			|
+			<a href="legal.php">Legal</a>
+		</div>
+		<div class="footer-support">
+			If you have any questions please email us at <a href="mailto:admin@nexentire.co.uk">admin@nexentire.co.uk</a>
+		</div>
+	</div>
+</div>
+<footer class="nx-footer">
+	<div class="nx-footer-inner clearfix flex-container">
+		<div class="footer-logo">
+			<div class="footer-inner">
+				<a class="footer-nx-logo" href="/"><img src="/assets/images/nexen-logo-bw.png" class="img-responsive nx-logo" alt="Nexen - Online Order System"></a>
+				<h4 class="footer-nx-order-sys">
+					Online Order System
+				</h4>
+			</div>
+		</div>
+		<div class="footer-content">
+			<p class="business-name">
+				NEXEN TYRE EUROPE S.R.O
+			</p>
+			<p class="business-info">
+				Lise-Meitner-Straße 1, 65779 Kelkheim (Taunus), Germany<br>
+				T. +49 6196 954 8655 / F. +49 6196 954 8677
+			</p>
+			<p class="extra-link">
+				<a href="javascript:void(0);"
+					tabindex="0"
+					data-html="true" 
+					data-toggle="popover"
+					data-trigger="focus"
+					data-placement="auto" 
+					title="Impressum"
+					data-content="
+						<div><b>NEXEN TIRE EUROPE s.r.o</b></div>
+						<div>Reifenhandel-Niederlassung Deutschland</div>
+						<div>Lise-Meitner-Str. 1, D-65779</div>
+						<div>Kelkheim(T/S), Germany</div></div>
+						<br>
+						<div>*Geschaftsfuhrer: Eung Young Lee</div>
+						<div>*Niederlassungsleiter: Jang Hyuk Lee</div>
+						<div>*Amtsgericht: Frankfurt a.M. HRB 109968</div>"
+				>Impressum</a>
+				<span class="divider"> / </span>
+				<a class="" href="Nexen_AGB_WEB.PDF" target="_blank">AGB</a>
+			</p>
+		</div>
+		<div class="footer-copyright">
+			<div class="footer-inner">
+				<p>
+					Copyright &copy; NEXEN TYRE all rights reserved
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+					
+
+
+
+
+
+
+
+
+
+<!-- Prodinfo-1-Modal -->
+<div class="modal fade prod-modal" id="Prodinfo-1-Modal" tabindex="-1" role="dialog" aria-labelledby="Prodinfo-1-Modal--Title" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="Prodinfo-1-Modal--Title">Product information</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="flex-container">
+					<div class="flex-item image-container">
+						<div class="item-inner">
+							<div id="Prod-image-Carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<div class="item-image-wrapper">
+											<div class="item-image-center">
+												<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png" class="prod-image" />
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="item-image-wrapper">
+											<div class="item-image-center">
+												<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/01/31/list_thumb.png" class="prod-image" />
+											</div>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<div class="item-image-wrapper">
+											<div class="item-image-center">
+												<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2019/04/02/list_thumb.png" class="prod-image" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="carousel-indicators carousel-thumbnails">
+									<li data-target="#Prod-image-Carousel" data-slide-to="0" class="active">
+										<div class="bg-fill" style="background-image: url('http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png');">
+									</li>
+									<li data-target="#Prod-image-Carousel" data-slide-to="1" class="">
+										<div class="bg-fill" style="background-image: url('http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/01/31/list_thumb.png');">
+									</li>
+									<li data-target="#Prod-image-Carousel" data-slide-to="2" class="">
+										<div class="bg-fill" style="background-image: url('http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2019/04/02/list_thumb.png');">
+									</li>
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+					<div class="flex-item prod-info-container">
+						<h3 class="prod-name">
+							<span class="d-field cd-prod-code">NX111111</span>
+						</h3>
+						<div class="prod-tyre-label">
+							<span class="d-field cd-label">
+								<span class="d-field cd-label-efficiency icon-fuel">A</span>
+								<span class="d-field cd-label-wetgrip icon-rain">A</span>
+								<span class="d-field cd-label-noise icon-noise">70dB</span>
+							</span>
+						</div>
+						<ul class="prod-spec">
+							<li class="spec-item">
+								<span class="data-label">EAN:</span>
+								<span class="d-field cd-ean">8807622105357</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Brand:</span>
+								<span class="d-field cd-brand">Nexen</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Size:</span>
+								<span class="d-field cd-size">180/70R 15A</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Pattern:</span>
+								<span class="d-field cd-pattern">XxXxXxXx</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Load index:</span>
+								<span class="d-field cd-load-index">99</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Speed:</span>
+								<span class="d-field cd-speed">R</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Car type:</span>
+								<span class="d-field cd-car-type">LTR</span>
+							</li>
+							<li class="spec-item">
+								<span class="data-label">Season:</span>
+								<span class="d-field cd-season">Summer</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- Shopping List Modal -->
+<div class="modal fade shoplist-modal" id="ShopList-Modal" tabindex="-1" role="dialog" aria-labelledby="ShopList-Modal--Title" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="ShopList-Modal--Title">Shopping List & Last Order</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="shoplist-container">
+					<div class="flex-container shoplist-summary"><div class="flex-item no-item">
+						Total <span class="no" id="Item-No">12</span> products <span class="hidden-xs">in your shopping list</span>
+					</div>
+						<div class="flex-item currency">
+							Currency: <span class="euro">EUR €</span>
+						</div>
+					</div>
+					<article class="item-container" id="ShopList-Item-1">
+						<div class="clearfix">
+							<div class="image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX111111</span>
+										</h3>
+										<div class="prod-tyre-label">
+											<span class="d-field cd-label">
+												<span class="d-field cd-label-efficiency icon-fuel">A</span>
+												<span class="d-field cd-label-wetgrip icon-rain">A</span>
+												<span class="d-field cd-label-noise icon-noise">70dB</span>
+											</span>
+										</div>
+										<div class="spec-open">
+											<a data-toggle="collapse" href="#collapse-ProdSpec-1" role="button" aria-expanded="false" aria-controls="collapse-ProdSpec-1">
+											  Specification <span class="icon-arrowdown"><!--icon--></span>
+											</a>
+										</div>
+										<div class="collapse spec-container" id="collapse-ProdSpec-1">
+											<ul class="prod-spec flex-container">
+												<li class="spec-item">
+													<span class="data-label">EAN:</span>
+													<span class="d-field cd-ean">8807622105357</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Brand:</span>
+													<span class="d-field cd-brand">Nexen</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Size:</span>
+													<span class="d-field cd-size">180/70R 15A</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Pattern:</span>
+													<span class="d-field cd-pattern">XxXxXxXx</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Load index:</span>
+													<span class="d-field cd-load-index">99</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Speed:</span>
+													<span class="d-field cd-speed">R</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Car type:</span>
+													<span class="d-field cd-car-type">LTR</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Season:</span>
+													<span class="d-field cd-season">Summer</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<!-- <span class="data-label currency">EUR</span> -->
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="item-container" id="ShopList-Item-2">
+						<div class="clearfix">
+							<div class="image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX22222222</span>
+										</h3>
+										<div class="prod-tyre-label">
+											<span class="d-field cd-label">
+												<span class="d-field cd-label-efficiency icon-fuel">A</span>
+												<span class="d-field cd-label-wetgrip icon-rain">A</span>
+												<span class="d-field cd-label-noise icon-noise">70dB</span>
+											</span>
+										</div>
+										<div class="spec-open">
+											<a data-toggle="collapse" href="#collapse-ProdSpec-2" role="button" aria-expanded="false" aria-controls="collapse-ProdSpec-2">
+											  Specification <span class="icon-arrowdown"><!--icon--></span>
+											</a>
+										</div>
+										<div class="collapse spec-container" id="collapse-ProdSpec-2">
+											<ul class="prod-spec flex-container">
+												<li class="spec-item">
+													<span class="data-label">EAN:</span>
+													<span class="d-field cd-ean">8807622105357</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Brand:</span>
+													<span class="d-field cd-brand">Nexen</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Size:</span>
+													<span class="d-field cd-size">180/70R 15A</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Pattern:</span>
+													<span class="d-field cd-pattern">XxXxXxXx</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Load index:</span>
+													<span class="d-field cd-load-index">99</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Speed:</span>
+													<span class="d-field cd-speed">R</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Car type:</span>
+													<span class="d-field cd-car-type">LTR</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Season:</span>
+													<span class="d-field cd-season">Summer</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<!-- <span class="data-label currency">EUR</span> -->
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="item-container" id="ShopList-Item-2">
+						<div class="clearfix">
+							<div class="image-container">
+								<div class="item-inner">
+									<div class="item-image-wrapper">
+										<div class="item-image-center">
+											<img src="http://www.nexentire.com/kr/product/passenger/__icsFiles/afieldfile/2017/07/28/list_thumb.png" class="prod-image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="desc-container">
+								<div class="flex-container horizontal-start">
+									<div class="flex-item prod-info-container">
+										<h3 class="prod-name">
+											<span class="d-field cd-prod-code">NX22222222</span>
+										</h3>
+										<div class="prod-tyre-label">
+											<span class="d-field cd-label">
+												<span class="d-field cd-label-efficiency icon-fuel">A</span>
+												<span class="d-field cd-label-wetgrip icon-rain">A</span>
+												<span class="d-field cd-label-noise icon-noise">70dB</span>
+											</span>
+										</div>
+										<div class="spec-open">
+											<a data-toggle="collapse" href="#collapse-ProdSpec-2" role="button" aria-expanded="false" aria-controls="collapse-ProdSpec-2">
+											  Specification <span class="icon-arrowdown"><!--icon--></span>
+											</a>
+										</div>
+										<div class="collapse spec-container" id="collapse-ProdSpec-2">
+											<ul class="prod-spec flex-container">
+												<li class="spec-item">
+													<span class="data-label">EAN:</span>
+													<span class="d-field cd-ean">8807622105357</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Brand:</span>
+													<span class="d-field cd-brand">Nexen</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Size:</span>
+													<span class="d-field cd-size">180/70R 15A</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Pattern:</span>
+													<span class="d-field cd-pattern">XxXxXxXx</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Load index:</span>
+													<span class="d-field cd-load-index">99</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Speed:</span>
+													<span class="d-field cd-speed">R</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Car type:</span>
+													<span class="d-field cd-car-type">LTR</span>
+												</li>
+												<li class="spec-item">
+													<span class="data-label">Season:</span>
+													<span class="d-field cd-season">Summer</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="flex-item shop-func-container">
+										<div class="stock">
+											<span class="data-label">Stock:</span>
+											<span class="d-field cd-stock">999+</span>
+										</div>
+										<div class="price">
+											<!-- <span class="data-label currency">EUR</span> -->
+											<span class="d-field cd-unit-price">€1234.00</span>
+										</div>
+										<div class="add-to-cart">
+											<span class="d-field cd-cart">
+												<select id="Qty" class="qty-no">
+													<option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="789">789</option>
+												</select>
+												<button type="button" class="btn icon-cart cd-add-cart">
+													Add <span class="to-cart">to cart</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- TNC-Modal -->
+<div class="modal fade tnc-modal" id="TNC-Modal" tabindex="-1" role="dialog" aria-labelledby="TNC-Modal--Title" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="TNC-Modal--Title">Terms & Conditions</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h2>Hello</h2>
+				<h4>1. Lorem ipsum dolor sit amet</h4>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum eros at elit accumsan volutpat. Nulla eu massa ut purus congue hendrerit vitae non leo. Proin sed luctus nisl. In quis vestibulum nisi, a finibus felis. Suspendisse potenti. Nunc accumsan elementum posuere. Praesent convallis purus nulla. Morbi eu pulvinar risus, eu cursus sapien. Nunc ultrices nibh quis posuere mollis. Duis dapibus eros quis consequat viverra. Integer varius tristique tristique. Phasellus pretium varius metus, sed posuere tellus dapibus non. Suspendisse potenti. Suspendisse viverra ipsum vel malesuada consequat.
+				</p>
+				<h4>2. Lorem ipsum dolor sit amet</h4>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum eros at elit accumsan volutpat. Nulla eu massa ut purus congue hendrerit vitae non leo. Proin sed luctus nisl. In quis vestibulum nisi, a finibus felis. Suspendisse potenti. Nunc accumsan elementum posuere. Praesent convallis purus nulla. Morbi eu pulvinar risus, eu cursus sapien. Nunc ultrices nibh quis posuere mollis. Duis dapibus eros quis consequat viverra. Integer varius tristique tristique. Phasellus pretium varius metus, sed posuere tellus dapibus non. Suspendisse potenti. Suspendisse viverra ipsum vel malesuada consequat.
+				</p>
+				<h4>3. Lorem ipsum dolor sit amet</h4>
+				<ul>
+					<li>Nam sed tortor consectetur, cursus nisi a, congue nulla.</li>
+					<li>Sed ut eros pellentesque, efficitur velit at, suscipit est.</li>
+					<li>Praesent ultricies ipsum in porttitor consequat.</li>
+					<li>Ut ac eros ornare leo commodo blandit at in lectus.</li>
+					<li>Phasellus sed arcu vel odio interdum tristique.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="/assets/base/jquery-3.3.1.slim.min.js"></script>
+		<script src="/assets/base/popper.min.js"></script>
+		<script src="/assets/base/bootstrap.min.js"></script>
+
+		<script src="/assets/base/bootstrap-datepicker.min.js"></script>
+
+
+		<!-- <script type='text/javascript' src="http://localhost:8888/assetlibs/test/nx-custom.js"></script> -->
+		<script src="/assets/scripts/nx-custom.js"></script>
+
+
+
+
+
+
+	</body>
+</html>

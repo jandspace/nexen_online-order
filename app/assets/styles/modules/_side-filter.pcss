@@ -1,0 +1,152 @@
+.nx-wrapper {
+	.nx-primary-sidebar {
+		.sidebar-inner {
+
+			body.page-order & {
+				/* @mixin sm-min {
+					padding-top: 0;
+				} */
+				@mixin lg-min {
+					padding-top: 15px;
+				}
+			}
+
+			.filter {
+				@mixin sm-min {
+					/* padding-bottom: 60px; */
+				}
+				
+				&.filter-sm {
+					display: block;
+
+					a.filter-trigger {
+						display: block;
+						padding: 12px;
+						font-weight: 700;
+						text-transform: uppercase;
+						border-color: transparent;
+						background-color: #AAA;
+						border-radius: 0;
+						color: $color-grey-k;
+					}
+
+					@mixin sm-min {
+						display: none;
+					}
+				}
+				&.filter-lg {
+					@mixin xs-max {
+						padding: 12px;
+						border: 1px solid #DDDDDD;
+						background-color: #EAEAEA;
+					}
+					@mixin sm-min {
+						display: block;
+						max-width: 280px;
+					}
+				}
+
+				h2.sidebar-title {
+					display: none;
+
+					@mixin sm-min {
+						display: block;
+						margin: 20px 0 10px 0;
+						font-size: $font-size-md;
+						font-weight: $font-weight-bold;
+						text-transform: uppercase;
+						color: $color-primary;
+					}
+					@mixin md-min {
+						margin: 20 0 15px 0;
+						font-size: $font-size-lg;
+					}
+					@mixin lg-min {
+						margin: 20px 0 15px 0;
+					}
+				}
+
+				.filter-box {
+					background-color: $color-white;
+					box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.05);
+					margin-bottom: 20px;
+
+					.box-title {
+						display: block;
+						position: relative;
+						text-decoration: none;
+						color: $color-white;
+						background-color: $color-primary;
+						
+						@mixin md-min {
+							&:hover {
+								background-color: $color-primary-light;
+							}
+						}
+
+						&:before {
+							font-family: 'nx-icon';
+							content: "\e90b";
+							position: absolute;
+							font-weight: 900;
+							width: 20px;
+							height: 20px;
+							line-height: 20px;
+							text-align: center;
+							right: 8px;
+							top: calc(50% = 10px);
+						}
+					}
+					.box-title.collapsed {
+						&:before {
+							content: "\e90c";
+						}
+					}
+
+					.box-title,
+					.box-items {
+						padding: 4%;
+
+						.oneChoice {
+							padding: 4px 0;
+							input[type="checkbox"],
+							input[type="radio"] {
+								margin-right: 2px;
+							}
+							label {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+
+				.close-filter {
+					display: block;
+					text-align: center;
+					@mixin sm-min {
+						display: none;
+					}
+				}
+			}
+		}
+
+
+		.banner-container {
+			margin: 30px 0;
+			padding: 10px 0;
+			/* border-top: 1px solid $color-grey-f; */
+
+			.banner-item {
+				margin-bottom: 10px;
+			}
+
+			@mixin xs-max {
+				display: none;
+			}
+
+			@mixin sm-min {
+				max-width: 280px;
+			}
+		}
+	}
+}
